@@ -1,0 +1,17 @@
+# nodejs
+node_modules
+
+# Logs
+logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# misc
+.DS_Store
+
+# dist
+dist
+
+# editors
+.vscode
