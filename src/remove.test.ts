@@ -1,14 +1,37 @@
 import { describe, expect, it } from 'vitest'
-import { removeLineStartsWith } from './remove'
+import { removeLineStartsWith, removeLineEndsWith } from './remove'
 
 describe('removeLineStartsWith', () => {
   it('normal', () => {
-    expect(removeLineStartsWith(`aaa
-bbb
-ccc
-bbb
-ccc`, 'bbb')).toStrictEqual(`aaa
-ccc
-ccc`)
+    expect(
+      removeLineStartsWith(
+        `aaaaa
+bbbaa
+cccaa
+bbbaa
+cccaa`,
+        'bbb',
+      ),
+    ).toStrictEqual(`aaaaa
+cccaa
+cccaa`)
+  })
+})
+
+
+describe('removeLineEndsWith', () => {
+  it('normal', () => {
+    expect(
+      removeLineEndsWith(
+        `aaaaa
+aabbb
+aaccc
+aabbb
+aaccc`,
+        'bbb',
+      ),
+    ).toStrictEqual(`aaaaa
+aaccc
+aaccc`)
   })
 })

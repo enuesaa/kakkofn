@@ -1,3 +1,3 @@
-export { countTextLength } from './count'
-export { removeLineStartsWith } from './remove'
-export { replaceText } from './replace'
+export * from './count'
+export * from './remove'
+export * from './replace'
