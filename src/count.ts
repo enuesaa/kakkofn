@@ -1,12 +1,5 @@
+import { Int, Text } from './datatype'
 
-type CountParam = {
-  text: string
-}
-type CountResult = {
-  length: number
-}
-const countTextLength = (text: string): number => {
+export const countTextLength = (text: Text): Int => {
   return text.length
 }
-
-export { countTextLength }

@@ -1,13 +1,6 @@
-
-// dry run
-
-type RemoveLineStartsWithParam = {
-  text: string
-  prefix: string // search str
-}
-type RemoveLineStartsWithParamResult = {
-  text: string
-}
+/**
+ * @deprecated 
+ */
 const removeLineStartsWith = (text: string, prefix: string): string => {
   // We can split logics of this function, of course, 
   // but we do not want those because it requires us to build logics by your self.
@@ -21,14 +14,9 @@ const removeLineStartsWith = (text: string, prefix: string): string => {
     .join('\n')
 }
 
-
-type RemoveLineEndsWithParam = {
-  text: string
-  suffix: string // search str
-}
-type RemoveLineEndsWithResult = {
-  text: string
-}
+/**
+ * @deprecated 
+ */
 const removeLineEndsWith = (text: string, suffix: string): string => {
   return text
     .split('\n')

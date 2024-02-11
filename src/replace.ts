@@ -1,14 +1,5 @@
-type ReplaceTextParam = {
-  text: string
-  from: string // search str
-  to: string // search str
-}
-type ReplaceTextResult = {
-  text: string
-}
+import { Text } from './datatype'
 
-const replaceText = (text: string, from: string, to: string): string => {
+export const replaceText = (text: Text, from: Text, to: Text): Text => {
   return text.replaceAll(from, to)
 }
-
-export { replaceText }

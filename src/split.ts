@@ -1,20 +1,18 @@
-type KakkoText = string
-type KakkoTexts = string[]
+import { Text, Texts } from './datatype'
 
-const splitln = ({ text }: { text: KakkoText }): KakkoTexts => {
+export const splitln = (text: Text): Texts => {
   return text.split('\n')
 }
 
-const joinln = ({ texts }: { texts: KakkoTexts }): KakkoText => {
+export const joinln = (texts: Texts): Text => {
   return texts.join('\n')
 }
 
-const filterTextsWithPrefix = ({ texts, prefix }: { texts: KakkoTexts, prefix: KakkoText }): KakkoTexts => {
+export const filterTextsWithPrefix = (texts: Texts, prefix: Text): Texts => {
   return texts.filter((s) => !s.startsWith(prefix))
 }
 
-
 // this is poc code. we can construct this logic on gui
-const removeLineStartsWith = ({ text, prefix }: { text: KakkoText, prefix: KakkoText }): KakkoText => {
-  return joinln({ texts: filterTextsWithPrefix({texts: splitln({text}), prefix}) })
-}
+// const removeLineStartsWith = ({ text, prefix }: { text: KakkoText, prefix: KakkoText }): KakkoText => {
+//   return joinln({ texts: filterTextsWithPrefix({texts: splitln({text}), prefix}) })
+// }
