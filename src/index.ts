@@ -1,3 +1,3 @@
-export * from './count'
-export * from './remove'
-export * from './replace'
+export * from './text/count'
+export * from './text/remove'
+export * from './text/replace'

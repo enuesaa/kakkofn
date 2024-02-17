@@ -10,7 +10,10 @@
     "declaration": true,
     "declarationMap": true,
     "emitDeclarationOnly": true,
-    "baseUrl": "./"
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["src/*"]
+    }
   },
   "include": ["src/**/*.ts"],
   "exclude": ["src/**/*.test.ts", "dist", "node_modules"]

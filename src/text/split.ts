@@ -1,4 +1,4 @@
-import { Text, Texts } from './datatype'
+import { Text, Texts } from '@/type'
 
 export const splitln = (text: Text): Texts => {
   return text.split('\n')
