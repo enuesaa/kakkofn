@@ -1,0 +1,11 @@
+{
+  "name": "@enuesaa/kakkofnui",
+  "license": "MIT",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

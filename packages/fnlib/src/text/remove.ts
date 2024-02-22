@@ -1,8 +1,8 @@
 /**
- * @deprecated 
+ * @deprecated
  */
 const removeLineStartsWith = (text: string, prefix: string): string => {
-  // We can split logics of this function, of course, 
+  // We can split logics of this function, of course,
   // but we do not want those because it requires us to build logics by your self.
   // logic:
   // - split line
@@ -15,7 +15,7 @@ const removeLineStartsWith = (text: string, prefix: string): string => {
 }
 
 /**
- * @deprecated 
+ * @deprecated
  */
 const removeLineEndsWith = (text: string, suffix: string): string => {
   return text

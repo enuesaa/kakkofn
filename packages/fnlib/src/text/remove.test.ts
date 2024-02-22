@@ -18,7 +18,6 @@ cccaa`)
   })
 })
 
-
 describe('removeLineEndsWith', () => {
   it('normal', () => {
     expect(

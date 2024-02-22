@@ -1,0 +1,26 @@
+{
+  "name": "@enuesaa/kakkofnlib",
+  "version": "0.0.2",
+  "license": "MIT",
+  "type": "module",
+  "exports": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "build": "tsx build.ts && tsc",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "test": "vitest --run"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.16",
+    "esbuild": "^0.20.0",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.3",
+    "vitest": "^1.2.2"
+  }
+}
