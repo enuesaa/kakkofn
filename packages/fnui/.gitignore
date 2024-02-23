@@ -1,0 +1,9 @@
+node_modules
+dist
+
+# debug
+npm-debug.log*
+.pnpm-debug.log*
+
+# typescript
+*.tsbuildinfo
