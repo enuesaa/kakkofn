@@ -12,13 +12,10 @@ export default defineConfig({
   build: {
     outDir: './dist',
   },
-  plugins: [
-    react(),
-    vanillaExtractPlugin(),
-  ],
+  plugins: [react(), vanillaExtractPlugin()],
   resolve: {
     alias: {
       '@/': path.join(__dirname, './src/'),
-    }
+    },
   },
 })

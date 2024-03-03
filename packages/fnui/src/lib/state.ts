@@ -1,8 +1,8 @@
 import { atom, useAtomValue, useSetAtom } from 'jotai'
 
 type Workflow = {
-  input: string;
-  output: string;
+  input: string
+  output: string
 }
 const workflowAtom = atom<Workflow>({ input: '', output: '' })
 export const useGetWorkflow = () => useAtomValue(workflowAtom)

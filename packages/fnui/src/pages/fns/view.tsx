@@ -7,7 +7,7 @@ export default function Page() {
   const { name } = useParams()
 
   if (name === undefined) {
-    return (<></>)
+    return <></>
   }
 
   return (

@@ -6,15 +6,15 @@ import { CountCard } from './CountCard'
 import { ReplaceCard } from './ReplaceCard'
 
 type Props = {
-  name: string;
+  name: string
 }
 export const Flow = ({ name }: Props) => {
   return (
     <Container className={styles.container}>
       <TextInputCard />
       <ArrowDown />
-      {name === 'count' && (<CountCard />)}
-      {name === 'replace' && (<ReplaceCard />)}
+      {name === 'count' && <CountCard />}
+      {name === 'replace' && <ReplaceCard />}
     </Container>
   )
 }

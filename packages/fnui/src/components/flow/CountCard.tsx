@@ -10,7 +10,7 @@ export const CountCard = () => {
   return (
     <Card mt='4' className={styles.card}>
       <Text as='div' size='2' weight='bold'>
-      文字数カウント
+        文字数カウント
       </Text>
       <Text as='div' color='gray' size='8' mt='3'>
         {len.toString()}
