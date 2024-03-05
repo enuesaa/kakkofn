@@ -1,34 +1,28 @@
 import { Header } from '@/components/common/Header'
-import { Box, Container, Tabs, TextArea } from '@radix-ui/themes'
+import { Box, Container, Flex, Tabs, TextArea } from '@radix-ui/themes'
 
 export default function Page() {
   return (
     <>
       <Header />
-      <Container>
-        <Tabs.Root defaultValue='nothing'>
-          <Tabs.List>
-            <Tabs.Trigger value='nothing'>free format</Tabs.Trigger>
-            <Tabs.Trigger value='json'>JSON</Tabs.Trigger>
-            <Tabs.Trigger value='yaml'>YAML</Tabs.Trigger>
-            <Tabs.Trigger value='csv'>CSV</Tabs.Trigger>
-          </Tabs.List>
-
-          <Box px='4' pt='3' pb='2'>
-            <Tabs.Content value='nothing'>
-              <TextArea size='3' />
-            </Tabs.Content>
-            <Tabs.Content value='json'>
-              <TextArea size='3' />
-            </Tabs.Content>
-            <Tabs.Content value='yaml'>
-              <TextArea size='3' />
-            </Tabs.Content>
-            <Tabs.Content value='csv'>
-              <TextArea size='3' />
-            </Tabs.Content>
+      <Container size='4'>
+        {/* show control menu left size on edit mode */}
+        <Flex gap='5' style={{ width: '100%' }}>
+          <Box grow='1' shrink='1' style={{ width: '49%' }}>
+            <TextArea size='3' style={{minHeight: '350px'}} />
           </Box>
-        </Tabs.Root>
+          <Box grow='1' shrink='1' style={{ width: '49%' }}>
+            <Flex gap='2'>
+              <Box grow='1' shrink='1' style={{width: '100px', height: '100px'}}>文字数</Box>
+              <Box grow='1' shrink='1' style={{width: '100px', height: '100px'}}>a</Box>
+              <Box grow='1' shrink='1' style={{width: '100px', height: '100px'}}>a</Box>
+              <Box grow='1' shrink='1' style={{width: '100px', height: '100px'}}>a</Box>
+              <Box grow='1' shrink='1' style={{width: '100px', height: '100px'}}>a</Box>
+              <Box grow='1' shrink='1' style={{width: '100px', height: '100px'}}></Box>
+            </Flex>
+          </Box>
+        </Flex>
+        bind json
       </Container>
     </>
   )
