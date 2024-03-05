@@ -9,7 +9,7 @@ export const Header = () => {
         <Box style={{width: '200px'}}>
           <Link href='/' className={styles.heading}>kakkofn</Link>
         </Box>
-        <Box grow='1' shrink='1'></Box>
+        <Box grow='1' shrink='1'>テキスト加工ツール</Box>
         <Box style={{width: '100px'}}>
           <Button>edit</Button>
         </Box>
