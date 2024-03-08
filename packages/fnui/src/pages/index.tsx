@@ -1,9 +1,9 @@
-import { Header } from '@/components/common/Header'
+import { Layout } from '@/components/common/Layout'
 
 export default function Page() {
-  return (
-    <>
-      <Header />
-    </>
+  return (  
+    <Layout>
+      a
+    </Layout>
   )
 }

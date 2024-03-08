@@ -2,6 +2,8 @@ import { Box, Button, Card, Flex, Heading, Section, TextArea } from '@radix-ui/t
 import styles from './Workflow.css'
 import { MouseEventHandler, useRef } from 'react'
 import { TextCountCard } from './TextCountCard'
+import { AddCardButton } from './AddCardButton'
+import { AddStepArea } from './AddStepArea'
 
 export const Workflow = () => {
   const fromRef = useRef<HTMLTextAreaElement>(null)
@@ -26,9 +28,12 @@ export const Workflow = () => {
         <Box grow='0' shrink='0' style={{width:'200px'}}>
           <TextCountCard />
           <TextCountCard />
+          <AddCardButton />
         </Box>
-      </Flex>  
-      <Button onClick={handleClick}>改行trim</Button>
+      </Flex>
+      <AddStepArea>
+        <Button onClick={handleClick}>改行trim</Button>
+      </AddStepArea>
       <TextArea placeholder='改行なし' mt='2' style={{height: '300px'}} ref={toRef} />
     </Card>
   )
