@@ -1,11 +1,12 @@
-import { Box, Flex } from '@radix-ui/themes'
-import { ReactNode } from 'react'
+import { Box, Button, Flex } from '@radix-ui/themes'
+import { MouseEventHandler } from 'react'
 import { FaArrowDown } from 'react-icons/fa'
 
-type Props = {
-  children: ReactNode,
-}
-export const AddStepArea = ({ children }: Props) => {
+export const AddStepArea = () => {
+  const handleClick: MouseEventHandler<HTMLButtonElement> = (e) => {
+    e.preventDefault()
+  }
+
   return (
     <Box mt='3' style={{ fontSize: '25px' }}>
       <Flex>
@@ -13,7 +14,7 @@ export const AddStepArea = ({ children }: Props) => {
           <FaArrowDown />
         </Box>
         <Box grow='1' shrink='1'>
-          {children}
+          <Button onClick={handleClick}>改行trim</Button>
         </Box>
       </Flex>
     </Box>
