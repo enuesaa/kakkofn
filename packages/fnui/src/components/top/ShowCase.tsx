@@ -9,10 +9,8 @@ export const ShowCase = () => {
         <ShowCaseCard title='文字数カウント' />
         <ShowCaseCard title='空白削除' />
         <ShowCaseCard title='改行削除' />
-        <ShowCaseCard title='' />
         <ShowCaseCard title='Base64 Decode' />
         <ShowCaseCard title='Base64 Encode' />
-        <ShowCaseCard title='' />
       </Flex>
     </>
   )

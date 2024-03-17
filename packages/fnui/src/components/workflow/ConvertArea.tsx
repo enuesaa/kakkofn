@@ -3,6 +3,7 @@ import { Box, Button, Flex } from '@radix-ui/themes'
 import { MouseEventHandler } from 'react'
 import { FaArrowDown } from 'react-icons/fa'
 import { StepConvert } from './StepConvert'
+import { removeln, replace } from '@/lib/convert'
 
 type Props = {
   position: number
@@ -20,11 +21,9 @@ export const ConvertArea = ({ position }: Props) => {
     e.preventDefault()
     //TODO
     if (position > 0) {
-      const text = input.replaceAll('a', 'b')
-      setOutput(text)
+      setOutput(replace(input, 'a', 'b'))
     } else {
-      const text = input.replaceAll('\n', '')
-      setOutput(text)
+      setOutput(removeln(input))
     }
   }
 
