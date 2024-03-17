@@ -25,9 +25,6 @@ export const Workflow = () => {
       <AddStepArea>
         <Button onClick={handleClick}>改行trim</Button>
       </AddStepArea>
-      <Step>
-        <TextArea size='3' style={{minHeight: '350px'}} ref={toRef} />
-      </Step>
     </Card>
   )
 }

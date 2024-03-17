@@ -4,7 +4,7 @@ import { ShowCaseCard } from './ShowCaseCard'
 export const ShowCase = () => {
   return (
     <>
-      <Heading>ShowCase</Heading>
+      <Heading style={{margin: '10px 0'}}>ショーケース</Heading>
       <Flex wrap='wrap' gap='5'>
         <ShowCaseCard title='文字数カウント' />
         <ShowCaseCard title='空白削除' />
