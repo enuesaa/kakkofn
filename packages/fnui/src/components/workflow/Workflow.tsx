@@ -10,6 +10,7 @@ export const Workflow = () => {
         <Heading mb='4'>ワークフロー</Heading>
         <StepInput />
         <ConvertArea position={0} />
+        <ConvertArea position={1} />
       </Card>
     </Provider>
   )
