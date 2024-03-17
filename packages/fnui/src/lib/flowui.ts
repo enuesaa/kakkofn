@@ -8,7 +8,11 @@
 //   options: FlowUIOption
 // }
 
-type FlowUIOption = { name: string } & (FlowUITextOption|FlowUISelectOption)
+type FlowUIOption = { name: string } & (FlowUINoOption|FlowUITextOption|FlowUISelectOption)
+type FlowUINoOption = {
+  type: 'no',
+  config: {},
+}
 type FlowUITextOption = {
   type: 'text';
   config: {

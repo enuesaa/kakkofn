@@ -7,17 +7,31 @@ type Workflow = {
   steps: WorkflowStep[] // exclude first step (input)
 }
 type WorkflowStep = {
-  text: string
   convert: FlowUIOption
+  output?: string
 }
 const workflowAtom = atom<Workflow>({
   input: {
-    text: ''
+    text: '',
   },
-  steps: [],
+  steps: [
+    {
+      convert: {
+        name: '改行trim',
+        type: 'no',
+        config: {},
+      },
+      output: undefined,
+    }
+  ],
 })
 
 export const useGetWorkflow = () => useAtomValue(workflowAtom)
+
+export const useGetWorkflowStep = (position: number): undefined|WorkflowStep => {
+  const workflow = useAtomValue(workflowAtom)
+  return workflow.steps.length > position ? workflow.steps[position] : undefined
+}
 
 export const useSetWorkflowInput = () => {
   const set = useSetAtom(workflowAtom)

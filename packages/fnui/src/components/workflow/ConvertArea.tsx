@@ -1,8 +1,18 @@
+import { useGetWorkflowStep } from '@/lib/workflow'
 import { Box, Button, Flex } from '@radix-ui/themes'
 import { MouseEventHandler } from 'react'
 import { FaArrowDown } from 'react-icons/fa'
 
-export const AddStepArea = () => {
+type Props = {
+  position: number
+}
+export const ConvertArea = ({ position }: Props) => {
+  const step = useGetWorkflowStep(position)
+
+  if (step === undefined) {
+    return (<></>)
+  }
+
   const handleClick: MouseEventHandler<HTMLButtonElement> = (e) => {
     e.preventDefault()
   }
@@ -14,7 +24,7 @@ export const AddStepArea = () => {
           <FaArrowDown />
         </Box>
         <Box grow='1' shrink='1'>
-          <Button onClick={handleClick}>改行trim</Button>
+          <Button onClick={handleClick}>{step.convert.name}</Button>
         </Box>
       </Flex>
     </Box>
