@@ -3,6 +3,38 @@ import { MouseEventHandler, useRef } from 'react'
 import { AddStepArea } from './AddStepArea'
 import { Step } from './Step'
 
+type FlowUIOptionTextConfig = {
+  default: string
+  multiline: boolean // default false
+}
+type FlowUIOptionSelectConfig = {
+  default: string
+  selection: string[]
+}
+
+type FlowUITextOption = {
+  type: 'text';
+  config: FlowUIOptionTextConfig;
+};
+type FlowUISelectOption = {
+  type: 'select';
+  config: FlowUIOptionSelectConfig;
+};
+
+type FlowUIOption = {
+  name: string;
+} & (FlowUITextOption|FlowUISelectOption)
+
+type FlowUIStep = {
+  input: 'text'
+  options: FlowUIOption
+}
+type FlowUI = {
+  name: string        // display name. allow duplicate
+  identifier: string  // id. use this in url.
+  steps: FlowUIStep[]
+}
+
 export const Workflow = () => {
   const fromRef = useRef<HTMLTextAreaElement>(null)
   const toRef = useRef<HTMLTextAreaElement>(null)
