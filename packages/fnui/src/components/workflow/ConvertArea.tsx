@@ -4,6 +4,7 @@ import { MouseEventHandler } from 'react'
 import { FaArrowDown } from 'react-icons/fa'
 import { StepConvert } from './StepConvert'
 import { removeln, replace } from '@/lib/convert'
+import { ConvertSelector } from './ConvertSelector'
 
 type Props = {
   position: number
@@ -35,7 +36,8 @@ export const ConvertArea = ({ position }: Props) => {
             <FaArrowDown />
           </Box>
           <Box flexGrow='1' flexShrink='1'>
-            <Button onClick={handleClick}>{step.convert.name}</Button>
+            <ConvertSelector value={step.convert.name} />
+            <Button onClick={handleClick}>do</Button>
           </Box>
         </Flex>
       </Box>

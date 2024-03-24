@@ -17,7 +17,7 @@ const workflowAtom = atom<Workflow>({
   steps: [
     {
       convert: {
-        name: '改行trim',
+        name: 'trimln', // add field for japanese
         type: 'no',
         config: {},
       },
@@ -25,7 +25,7 @@ const workflowAtom = atom<Workflow>({
     },
     {
       convert: {
-        name: 'replace a b',
+        name: 'replaceab',
         type: 'no',
         config: {},
       },
