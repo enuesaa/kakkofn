@@ -8,10 +8,10 @@ type Props = {
 export const Layout = ({ children }: Props) => {
   return (
     <Flex gap='3'>
-      <Box grow='0' shrink='0' p='1' style={{width: '200px'}}>
+      <Box width='200px'>
         <Header />
       </Box>
-      <Box grow='1' shrink='1' pr='3'>
+      <Box flexGrow='1' flexShrink='1' pr='3'>
         {children}
       </Box>
     </Flex>

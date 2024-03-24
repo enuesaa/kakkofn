@@ -31,10 +31,10 @@ export const ConvertArea = ({ position }: Props) => {
     <>
       <Box mt='3' style={{ fontSize: '25px' }}>
         <Flex>
-          <Box grow='0' shrink='0' style={{width: '100px', textAlign: 'center'}}>
+          <Box width='100px' style={{textAlign: 'center'}}>
             <FaArrowDown />
           </Box>
-          <Box grow='1' shrink='1'>
+          <Box flexGrow='1' flexShrink='1'>
             <Button onClick={handleClick}>{step.convert.name}</Button>
           </Box>
         </Flex>
