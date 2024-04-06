@@ -1,4 +1,4 @@
-import { Container } from '@radix-ui/themes'
+import { Container, Heading } from '@radix-ui/themes'
 import styles from './Flow.css'
 import { TextInputCard } from './TextInputCard'
 import { ArrowDown } from './ArrowDown'
@@ -12,6 +12,9 @@ type Props = {
 export const Flow = ({ name }: Props) => {
   return (
     <Container className={styles.container}>
+      {name === 'count' && <Heading mb='4'>文字数カウント</Heading>}
+      {name === 'replace' && <Heading mb='4'>文字列置き換え</Heading>}
+      {name === 'jsonformat' && <Heading mb='4'>JSONフォーマット</Heading>}
       <TextInputCard />
       <ArrowDown />
       {name === 'count' && <CountCard />}
