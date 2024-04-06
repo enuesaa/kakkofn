@@ -1,0 +1,32 @@
+import { Card, Text } from '@radix-ui/themes'
+import styles from './JsonFormatCard.css'
+import { useGetWorkflow } from '@/lib/state'
+
+const format = (text: string): string => {
+  try {
+    const parsed = JSON.parse(text)
+    const result = JSON.stringify(parsed, null, 2)
+    console.log(result)
+    return result
+  } catch (e) {}
+
+  return ''
+}
+
+export const JsonFormatCard = () => {
+  const workflow = useGetWorkflow()
+  const text = format(workflow.input)
+
+  return (
+    <Card mt='4' className={styles.card}>
+      <Text as='div' size='2' weight='bold'>
+        JSONフォーマット
+      </Text>
+      <Text as='div' color='gray' size='5' mt='3' style={{padding:'0 10px'}}>
+        <pre>
+          {text}
+        </pre>
+      </Text>
+    </Card>
+  )
+}

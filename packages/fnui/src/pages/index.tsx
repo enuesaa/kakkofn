@@ -11,6 +11,7 @@ export default function Page() {
       {/* <BuildWorkflow /> */}
       <Link href='/fns/replace'><Box>文字列置き換え</Box></Link>
       <Link href='/fns/count'><Box>文字数カウント</Box></Link>
+      <Link href='/fns/jsonformat'><Box>JSONフォーマット</Box></Link>
     </Layout>
   )
 }
