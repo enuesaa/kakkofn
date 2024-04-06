@@ -11,7 +11,7 @@ export const App = () => {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<TopPage />} />
-          <Route path='/workflow' element={<WorkflowPage />} />
+          {/* <Route path='/workflow' element={<WorkflowPage />} /> */}
           <Route path='/fns/:name' element={<FnViewPage />} />
         </Routes>
       </BrowserRouter>

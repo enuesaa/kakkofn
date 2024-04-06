@@ -1,6 +1,7 @@
 import { Card, Text } from '@radix-ui/themes'
 import styles from './JsonFormatCard.css'
 import { useGetWorkflow } from '@/lib/state'
+import { CopyButton } from '../common/CopyButton'
 
 const format = (text: string): string => {
   try {
@@ -22,6 +23,9 @@ export const JsonFormatCard = () => {
       <Text as='div' size='2' weight='bold'>
         JSONフォーマット
       </Text>
+      <div style={{position:'absolute', right: '10px', top: '10px'}}>
+        <CopyButton text={text} />
+      </div>
       <Text as='div' color='gray' size='5' mt='3' style={{padding:'0 10px'}}>
         <pre>
           {text}
