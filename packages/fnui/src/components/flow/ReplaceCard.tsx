@@ -1,8 +1,10 @@
-import { Button, Card, Text, TextField } from '@radix-ui/themes'
+import { Button, Card, Heading, Text, TextField } from '@radix-ui/themes'
 import styles from './ReplaceCard.css'
 import { useGetWorkflow, useSetWorkflowOuput } from '@/lib/state'
 import { replaceText } from '@enuesaa/kakkofnlib'
 import { MouseEventHandler, useRef } from 'react'
+import { ArrowDown } from './ArrowDown'
+import { TextInputCard } from './TextInputCard'
 
 export const ReplaceCard = () => {
   const workflow = useGetWorkflow()
@@ -21,16 +23,21 @@ export const ReplaceCard = () => {
   }
 
   return (
-    <Card mt='4' className={styles.card}>
-      <Text as='div' size='2' weight='bold'>
-        文字列置き換え
-      </Text>
-      <TextField.Root placeholder='from' mt='2' ref={fromRef} />
-      <TextField.Root placeholder='to' mt='2' ref={toRef} />
-      <Button onClick={handleClick}>置き換え</Button>
-      <Text as='div' color='gray' size='8' mt='3'>
-        {workflow.output}
-      </Text>
-    </Card>
+    <>
+      <Heading mb='4'>文字列置き換え</Heading>
+      <TextInputCard />
+      <ArrowDown />
+      <Card mt='4' className={styles.card}>
+        <Text as='div' size='2' weight='bold'>
+          文字列置き換え
+        </Text>
+        <TextField.Root placeholder='from' mt='2' ref={fromRef} />
+        <TextField.Root placeholder='to' mt='2' ref={toRef} />
+        <Button onClick={handleClick}>置き換え</Button>
+        <Text as='div' color='gray' size='8' mt='3'>
+          {workflow.output}
+        </Text>
+      </Card>
+    </>
   )
 }

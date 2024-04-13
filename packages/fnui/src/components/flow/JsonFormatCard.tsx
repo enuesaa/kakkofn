@@ -1,7 +1,9 @@
-import { Card, Text } from '@radix-ui/themes'
+import { Card, Heading, Text } from '@radix-ui/themes'
 import styles from './JsonFormatCard.css'
 import { useGetWorkflow } from '@/lib/state'
 import { CopyButton } from '../common/CopyButton'
+import { TextInputCard } from './TextInputCard'
+import { ArrowDown } from './ArrowDown'
 
 const format = (text: string): string => {
   try {
@@ -19,18 +21,23 @@ export const JsonFormatCard = () => {
   const text = format(workflow.input)
 
   return (
-    <Card mt='4' className={styles.card}>
-      <Text as='div' size='2' weight='bold'>
-        JSONフォーマット
-      </Text>
-      <div style={{position:'absolute', right: '10px', top: '10px'}}>
-        <CopyButton text={text} />
-      </div>
-      <Text as='div' color='gray' size='5' mt='3' style={{padding:'0 10px'}}>
-        <pre>
-          {text}
-        </pre>
-      </Text>
-    </Card>
+    <>
+      <Heading mb='4'>JSONフォーマット</Heading>
+      <TextInputCard />
+      <ArrowDown />
+      <Card mt='4' className={styles.card}>
+        <Text as='div' size='2' weight='bold'>
+          JSONフォーマット
+        </Text>
+        <div style={{position:'absolute', right: '10px', top: '10px'}}>
+          <CopyButton text={text} />
+        </div>
+        <Text as='div' color='gray' size='5' mt='3' style={{padding:'0 10px'}}>
+          <pre>
+            {text}
+          </pre>
+        </Text>
+      </Card>
+    </>
   )
 }
