@@ -1,9 +1,8 @@
-import { Header } from '@/components/common/Header'
-import { Container } from '@radix-ui/themes'
 import { useParams } from 'react-router-dom'
 import { CountCard } from '@/components/flow/CountCard'
 import { ReplaceCard } from '@/components/flow/ReplaceCard'
 import { JsonFormatCard } from '@/components/flow/JsonFormatCard'
+import { Layout } from '@/components/common/Layout'
 
 export default function Page() {
   const { name } = useParams()
@@ -13,13 +12,10 @@ export default function Page() {
   }
 
   return (
-    <>
-      <Header />
-      <Container style={{textAlign: 'center'}}>
-        {name === 'count' && <CountCard />}
-        {name === 'replace' && <ReplaceCard />}
-        {name === 'jsonformat' && <JsonFormatCard />}
-      </Container>
-    </>
+    <Layout>
+      {name === 'count' && <CountCard />}
+      {name === 'replace' && <ReplaceCard />}
+      {name === 'jsonformat' && <JsonFormatCard />}
+    </Layout>
   )
 }

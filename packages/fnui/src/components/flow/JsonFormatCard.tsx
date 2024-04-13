@@ -21,8 +21,8 @@ export const JsonFormatCard = () => {
   const text = format(workflow.input)
 
   return (
-    <>
-      <Heading mb='4'>JSONフォーマット</Heading>
+    <section style={{textAlign: 'center'}}>
+      <Heading mt='7' m='3'>JSONフォーマット</Heading>
       <TextInputCard />
       <ArrowDown />
       <Card mt='4' className={styles.card}>
@@ -38,6 +38,6 @@ export const JsonFormatCard = () => {
           </pre>
         </Text>
       </Card>
-    </>
+    </section>
   )
 }

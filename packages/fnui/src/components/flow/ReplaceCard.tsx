@@ -23,8 +23,8 @@ export const ReplaceCard = () => {
   }
 
   return (
-    <>
-      <Heading mb='4'>文字列置き換え</Heading>
+    <section style={{textAlign: 'center'}}>
+      <Heading mt='7' m='3'>JSONフォーマット</Heading>
       <TextInputCard />
       <ArrowDown />
       <Card mt='4' className={styles.card}>
@@ -38,6 +38,6 @@ export const ReplaceCard = () => {
           {workflow.output}
         </Text>
       </Card>
-    </>
+    </section>
   )
 }

@@ -10,8 +10,8 @@ export const CountCard = () => {
   const len = countTextLength(workflow.input)
 
   return (
-    <>
-      <Heading mb='4'>文字数カウント</Heading>
+    <section style={{textAlign: 'center'}}>
+      <Heading mt='7' m='3'>JSONフォーマット</Heading>
       <TextInputCard />
       <ArrowDown />
       <Card mt='4' className={styles.card}>
@@ -22,6 +22,6 @@ export const CountCard = () => {
         {len.toString()}
       </Text>
     </Card>
-    </>
+    </section>
   )
 }
