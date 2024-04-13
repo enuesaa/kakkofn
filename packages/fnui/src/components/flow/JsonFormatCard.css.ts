@@ -5,5 +5,6 @@ export default {
     width: '90%',
     display: 'inline-block',
     position:'relative',
+    minHeight: '250px',
   }),
 }
