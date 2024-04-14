@@ -6,7 +6,9 @@ export const Header = () => {
   return (
     <header className={styles.main}>
       <Link href='/' className={styles.headinglink}>
-        <Text size='1' as='div'>テキスト加工ツール</Text>
+        <Text size='1' as='div'>
+          テキスト加工ツール
+        </Text>
         <Heading as='h1'>kakkofn</Heading>
       </Link>
       <Separator size='3' />

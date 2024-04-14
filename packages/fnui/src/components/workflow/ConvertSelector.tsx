@@ -1,7 +1,7 @@
 import { Select } from '@radix-ui/themes'
 
 type Props = {
-  value: string;
+  value: string
 }
 export const ConvertSelector = ({ value }: Props) => {
   return (

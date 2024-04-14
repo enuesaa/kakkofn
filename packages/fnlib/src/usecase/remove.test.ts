@@ -10,8 +10,8 @@ bbbaa
 cccaa
 bbbaa
 cccaa`,
-        'bbb',
-      ),
+        'bbb'
+      )
     ).toStrictEqual(`aaaaa
 cccaa
 cccaa`)

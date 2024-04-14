@@ -9,14 +9,14 @@ type Props = {
 export const StepConvert = ({ position }: Props) => {
   const step = useGetWorkflowStep(position)
   if (step === undefined) {
-    return (<></>)
+    return <></>
   }
   const text = step.output ?? ''
 
   return (
     <Flex gap='5' style={{ width: '100%' }}>
       <Box flexGrow='1' flexShrink='1'>
-        <TextArea size='3' style={{minHeight: '350px'}} defaultValue={text} />
+        <TextArea size='3' style={{ minHeight: '350px' }} defaultValue={text} />
       </Box>
       <Box width='200px'>
         <TextCountCard />

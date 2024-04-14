@@ -12,52 +12,53 @@ type WorkflowStep = {
 }
 const workflowAtom = atom<Workflow>({
   input: {
-    text: '',
+    text: ''
   },
   steps: [
     {
       convert: {
         name: 'trimln', // add field for japanese
         type: 'no',
-        config: {},
+        config: {}
       },
-      output: undefined,
+      output: undefined
     },
     {
       convert: {
         name: 'replaceab',
         type: 'no',
-        config: {},
+        config: {}
       },
-      output: undefined,
+      output: undefined
     }
-  ],
+  ]
 })
 
 export const useGetWorkflow = () => useAtomValue(workflowAtom)
 
-export const useGetWorkflowStep = (position: number): undefined|WorkflowStep => {
+export const useGetWorkflowStep = (position: number): undefined | WorkflowStep => {
   const workflow = useAtomValue(workflowAtom)
   return workflow.steps.length > position ? workflow.steps[position] : undefined
 }
 
 export const useSetWorkflowInput = () => {
   const set = useSetAtom(workflowAtom)
-  const setter = (text: string) => set((state) => ({ ...state, input: {text} }))
+  const setter = (text: string) => set((state) => ({ ...state, input: { text } }))
   return setter
 }
 
 export const useSetWorkflowStepOutput = (position: number) => {
   const set = useSetAtom(workflowAtom)
-  const setter = (text: string) => set((state) => {
-    if (state.steps.length > position) {
-      state.steps[position] = {
-        ...state.steps[position],
-        output: text,
+  const setter = (text: string) =>
+    set((state) => {
+      if (state.steps.length > position) {
+        state.steps[position] = {
+          ...state.steps[position],
+          output: text
+        }
       }
-    }
-    return { ...state }
-  })
+      return { ...state }
+    })
   return setter
 }
 

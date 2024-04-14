@@ -4,7 +4,7 @@ export default {
   card: style({
     width: '90%',
     display: 'inline-block',
-    position:'relative',
-    minHeight: '250px',
-  }),
+    position: 'relative',
+    minHeight: '250px'
+  })
 }

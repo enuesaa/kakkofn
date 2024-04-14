@@ -22,13 +22,15 @@ export const JsonFormatCard = () => {
   const text = format(workflow.input)
 
   return (
-    <section style={{textAlign: 'center', maxWidth: '1300px'}}>
-      <Heading mt='6' m='5'>JSONフォーマット</Heading>
+    <section style={{ textAlign: 'center', maxWidth: '1300px' }}>
+      <Heading mt='6' m='5'>
+        JSONフォーマット
+      </Heading>
       <Flex>
         <Box flexGrow='1' flexShrink='1'>
           <TextInputCard />
         </Box>
-        <Box style={{lineHeight: '200px'}}>
+        <Box style={{ lineHeight: '200px' }}>
           <FaArrowRight />
         </Box>
         <Box flexGrow='1' flexShrink='1'>
@@ -36,17 +38,15 @@ export const JsonFormatCard = () => {
             <Text as='div' size='2' weight='bold' mb='3'>
               JSONフォーマット
             </Text>
-            <div style={{position:'absolute', right: '10px', top: '10px'}}>
+            <div style={{ position: 'absolute', right: '10px', top: '10px' }}>
               <CopyButton text={text} />
             </div>
-            <Text as='div' color='gray' size='5' mt='3' style={{padding:'0 10px'}}>
-              <pre>
-                {text}
-              </pre>
+            <Text as='div' color='gray' size='5' mt='3' style={{ padding: '0 10px' }}>
+              <pre>{text}</pre>
             </Text>
           </Card>
         </Box>
-      </Flex>     
+      </Flex>
     </section>
   )
 }

@@ -15,7 +15,7 @@ export const ConvertArea = ({ position }: Props) => {
   const input = useGetWorkflowStepInput(position)
 
   if (step === undefined) {
-    return (<></>)
+    return <></>
   }
 
   const handleClick: MouseEventHandler<HTMLButtonElement> = (e) => {
@@ -32,7 +32,7 @@ export const ConvertArea = ({ position }: Props) => {
     <>
       <Box mt='3' style={{ fontSize: '25px' }}>
         <Flex>
-          <Box width='100px' style={{textAlign: 'center'}}>
+          <Box width='100px' style={{ textAlign: 'center' }}>
             <FaArrowDown />
           </Box>
           <Box flexGrow='1' flexShrink='1'>

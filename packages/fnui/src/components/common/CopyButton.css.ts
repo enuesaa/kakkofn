@@ -4,7 +4,6 @@ export default {
   main: style({
     color: '#aaaaaa',
     fontSize: '16px',
-    cursor: 'pointer',
-    
-  }),
+    cursor: 'pointer'
+  })
 }

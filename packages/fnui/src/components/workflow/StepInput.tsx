@@ -15,7 +15,7 @@ export const StepInput = () => {
   return (
     <Flex gap='5' style={{ width: '100%' }}>
       <Box flexGrow='1' flexShrink='1'>
-        <TextArea size='3' style={{minHeight: '350px'}} onChange={handleChange} />
+        <TextArea size='3' style={{ minHeight: '350px' }} onChange={handleChange} />
       </Box>
       <Box width='200px'>
         <TextCountCard />
