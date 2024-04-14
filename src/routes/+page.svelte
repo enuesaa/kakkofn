@@ -1,5 +1,9 @@
+<script lang="ts">
+	import Input from '$lib/ui/input/input.svelte'
+</script>
+
 <h1>hello</h1>
-<input type="text" name="a" />
+<Input />
 
 <style>
 	h1 {

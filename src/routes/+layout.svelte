@@ -1,9 +1,9 @@
 <script lang="ts">
-	import 'normalize.css'
+	import '../app.css'
 	import Header from './Header.svelte'
 </script>
 
 <Header />
 <main>
-	<slot />
+	<slot></slot>
 </main>
