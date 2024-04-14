@@ -1,9 +1,9 @@
 <script lang="ts">
-	import Input from '$lib/ui/input/input.svelte'
+	import Checkbox from './Checkbox.svelte'
 </script>
 
 <h1>hello</h1>
-<Input />
+<Checkbox />
 
 <style>
 	h1 {
