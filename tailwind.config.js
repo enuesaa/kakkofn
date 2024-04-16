@@ -1,9 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ['./src/**/*.{html,js,svelte,ts}', './node_modules/flowbite-svelte/**/*.{html,js,svelte,ts}'],
+  content: ['./src/**/*.{html,js,svelte,ts}'],
   theme: {
-    extend: {}
+    extend: {},
+    fontFamily: {
+      zenkaku: ['Zen Kaku Gothic New', 'sans-serif'],
+    },
   },
   darkMode: 'class',
-  plugins: [require('flowbite/plugin')],
+  plugins: [],
 }
