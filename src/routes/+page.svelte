@@ -1,5 +1,7 @@
 <script lang="ts">
-	import JsonFormat from './JsonFormat.svelte'
+	import FnCard from './FnCard.svelte'
 </script>
 
-<JsonFormat />
+<div class="flex my-2 p-2">
+	<FnCard href="/fns/jsonformat" title="JSON Format" />
+</div>
