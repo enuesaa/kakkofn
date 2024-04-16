@@ -6,5 +6,5 @@
 <Header />
 
 <main class="container mx-auto">
-	<slot></slot>
+	<slot />
 </main>
