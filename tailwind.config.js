@@ -3,6 +3,11 @@ export default {
   content: ['./src/**/*.{html,js,svelte,ts}'],
   theme: {
     extend: {},
+    colors: {
+      black: '#1a1a1a',
+      gray: '#cccccc',
+      grayer: '#dddddd',
+    },
     fontFamily: {
       zenkaku: ['Zen Kaku Gothic New', 'sans-serif'],
     },

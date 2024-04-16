@@ -14,10 +14,16 @@
 
 	<div class="flex">
 		<div class="flex-1">
-			<textarea bind:value={text} class="mx-auto w-11/12 rounded px-3 py-2 block min-h-20 text-black" />
+			<textarea
+				bind:value={text}
+				class="mx-auto w-11/12 rounded px-3 py-2 block min-h-20 bg-grayer text-black"
+			/>
 		</div>
 		<div class="flex-1">
-			<textarea bind:value={text2} class="mx-auto w-11/12 rounded px-3 py-2 block min-h-20 text-black" />
+			<textarea
+				bind:value={text2}
+				class="mx-auto w-11/12 rounded px-3 py-2 block min-h-20 bg-grayer text-black"
+			/>
 		</div>
 	</div>
 </section>
