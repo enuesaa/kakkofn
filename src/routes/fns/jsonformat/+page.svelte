@@ -16,11 +16,11 @@
 
 <FnPageLayout title="JSON Format" useArrowRightIcon>
 	<svelte:fragment slot="left">
-		<FnTextarea bind:value={text} placeholder={'{"a":"b"}'} />
+		<FnTextarea bind:value={text} placeholder={'{"a":"b"}'} label="入力" />
 	</svelte:fragment>
 
 	<svelte:fragment slot="right">
-		<FnTextarea bind:value={text2} placeholder={'{\n  "a": "b"\n}'} readonly />
+		<FnTextarea bind:value={text2} placeholder={'{\n  "a": "b"\n}'} readonly label="出力" />
 		<CopyButton text={text2} />
 	</svelte:fragment>
 </FnPageLayout>

@@ -9,7 +9,7 @@
 
 <FnPageLayout title="文字数カウント">
 	<svelte:fragment slot="left">
-		<FnTextarea bind:value={text} placeholder="aaa" />
+		<FnTextarea bind:value={text} placeholder="aaa" label="入力" />
 	</svelte:fragment>
 
 	<svelte:fragment slot="right">

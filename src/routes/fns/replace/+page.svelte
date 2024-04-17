@@ -13,13 +13,13 @@
 
 <FnPageLayout title="文字列置き換え" useArrowRightIcon>
 	<svelte:fragment slot="left">
-		<FnTextarea bind:value={text} placeholder="aaa" />
-		<FnTextInput bind:value={from} placeholder="from" />
-		<FnTextInput bind:value={to} placeholder="to" />
+		<FnTextarea bind:value={text} placeholder="aaa" label="入力" />
+		<FnTextInput bind:value={from} placeholder="a" label="from" />
+		<FnTextInput bind:value={to} placeholder="b" label="to" />
 	</svelte:fragment>
 
 	<svelte:fragment slot="right">
-		<FnTextarea bind:value={text2} placeholder="bbb" readonly />
+		<FnTextarea bind:value={text2} placeholder="bbb" readonly label="出力" />
 		<CopyButton text={text2} />
 	</svelte:fragment>
 </FnPageLayout>
