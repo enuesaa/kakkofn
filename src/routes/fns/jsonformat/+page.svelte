@@ -3,6 +3,7 @@
 	import CopyButton from '$lib/components/CopyButton.svelte'
 	import FnPageTitle from '$lib/components/FnPageTitle.svelte'
 	import FnPageLayout from '$lib/components/FnPageLayout.svelte'
+	import FnTextarea from '$lib/components/FnTextarea.svelte'
 	let text = ''
 	let text2 = ''
 
@@ -15,20 +16,11 @@
 
 <FnPageLayout title="JSON Format" useArrowRightIcon>
 	<svelte:fragment slot="left">
-		<textarea
-			bind:value={text}
-			class="mx-auto w-11/12 rounded px-3 py-2 block h-80 bg-grayer text-black outline-none border-black border"
-			placeholder={'{"a":"b"}'}
-		/>
+		<FnTextarea bind:value={text} placeholder={'{"a":"b"}'} />
 	</svelte:fragment>
 
 	<svelte:fragment slot="right">
-		<textarea
-			bind:value={text2}
-			class="mx-auto w-11/12 rounded px-3 py-2 block h-80 bg-grayer text-black outline-none border-black border"
-			readonly
-			placeholder={'{\n  "a": "b"\n}'}
-		/>
+		<FnTextarea bind:value={text2} placeholder={'{\n  "a": "b"\n}'} readonly />
 		<CopyButton text={text2} />
 	</svelte:fragment>
 </FnPageLayout>

@@ -1,5 +1,6 @@
 <script lang="ts">
 	import FnPageLayout from '$lib/components/FnPageLayout.svelte'
+	import FnTextarea from '$lib/components/FnTextarea.svelte'
 
 	let text = ''
 	let count: number = 0
@@ -8,11 +9,7 @@
 
 <FnPageLayout title="文字数カウント">
 	<svelte:fragment slot="left">
-		<textarea
-			bind:value={text}
-			class="mx-auto w-11/12 rounded px-3 py-2 block h-80 bg-grayer text-black outline-none border-black border"
-			placeholder="aaa"
-		/>
+		<FnTextarea bind:value={text} placeholder="aaa" />
 	</svelte:fragment>
 
 	<svelte:fragment slot="right">
