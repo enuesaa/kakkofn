@@ -5,14 +5,16 @@
 
 	import { createLabel, melt } from '@melt-ui/svelte'
 
-	const {elements: { root }} = createLabel()
+	const {
+		elements: { root }
+	} = createLabel()
 </script>
 
 <label use:melt={$root} class="mx-auto w-11/12 block my-3 mt-4 font-bold">
 	{label}
 	<input
-		bind:value={value}
-		placeholder={placeholder}
+		bind:value
+		{placeholder}
 		class="font-normal block rounded w-full p-3 bg-grayer text-black outline-none border-black border"
 	/>
 </label>

@@ -7,12 +7,12 @@ export default {
       white: '#fafafa',
       black: '#1a1a1a',
       gray: '#cccccc',
-      grayer: '#dddddd',
+      grayer: '#dddddd'
     },
     fontFamily: {
-      zenkaku: ['Zen Kaku Gothic New', 'sans-serif'],
-    },
+      zenkaku: ['Zen Kaku Gothic New', 'sans-serif']
+    }
   },
   darkMode: 'class',
-  plugins: [],
+  plugins: []
 }

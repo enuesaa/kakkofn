@@ -7,13 +7,13 @@
 
 	const {
 		elements: { trigger, content, arrow },
-		states: { open },
+		states: { open }
 	} = createTooltip({
 		positioning: {
-			placement: 'top',
+			placement: 'top'
 		},
 		openDelay: 0,
-		closeOnPointerDown: false,
+		closeOnPointerDown: false
 	})
 
 	async function copy() {
@@ -26,11 +26,7 @@
 </button>
 
 {#if $open}
-	<div
-		use:melt={$content}
-		transition:fade={{duration: 100}}
-		class="z-10 bg-grayer shadow-xl"
-	>
+	<div use:melt={$content} transition:fade={{ duration: 100 }} class="z-10 bg-grayer shadow-xl">
 		<div use:melt={$arrow} />
 		<p class="px-4 py-1">Copy</p>
 	</div>

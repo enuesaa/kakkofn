@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { ArrowRightIcon } from 'svelte-feather-icons'
-	import FnPageTitle from "$lib/components/FnPageTitle.svelte"
+	import FnPageTitle from '$lib/components/FnPageTitle.svelte'
 
 	export let title: string
 	export let useArrowRightIcon: boolean = false
@@ -15,9 +15,9 @@
 		</div>
 
 		{#if useArrowRightIcon}
-		<div class="flex-none pt-10">
-			<ArrowRightIcon />
-		</div>
+			<div class="flex-none pt-10">
+				<ArrowRightIcon />
+			</div>
 		{/if}
 
 		<div class="flex-1 relative">

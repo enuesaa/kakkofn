@@ -5,16 +5,18 @@
 	export let label: string = 'テキスト'
 
 	import { createLabel, melt } from '@melt-ui/svelte'
-   
-	const {elements: { root }} = createLabel()
+
+	const {
+		elements: { root }
+	} = createLabel()
 </script>
 
 <label use:melt={$root} class="mx-auto w-11/12 block font-bold">
 	{label}
 	<textarea
-		bind:value={value}
+		bind:value
 		class="font-normal w-full rounded px-3 py-2 block h-80 bg-grayer text-black outline-none border-black border"
-		placeholder={placeholder}
-		readonly={readonly}
+		{placeholder}
+		{readonly}
 	/>
 </label>
