@@ -1,7 +1,5 @@
 <script lang="ts">
-	import { ArrowRightIcon } from 'svelte-feather-icons'
 	import CopyButton from '$lib/components/CopyButton.svelte'
-	import FnPageTitle from '$lib/components/FnPageTitle.svelte'
 	import FnPageLayout from '$lib/components/FnPageLayout.svelte'
 	import FnTextarea from '$lib/components/FnTextarea.svelte'
 	let text = ''
