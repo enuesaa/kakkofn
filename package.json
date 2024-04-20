@@ -27,6 +27,7 @@
     "vite": "^5.2.8"
   },
   "dependencies": {
+    "buffer": "^6.0.3",
     "svelte-feather-icons": "^4.1.0"
   }
 }
