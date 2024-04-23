@@ -8,4 +8,5 @@
 	<FnCard href="/fns/replace" title="文字列置き換え" />
 	<FnCard href="/fns/base64encode" title="Base64 Encode" />
 	<FnCard href="/fns/base64decode" title="Base64 Decode" />
+	<FnCard href="/fns/urlencode" title="Url Encode" />
 </div>
