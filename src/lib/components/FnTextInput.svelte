@@ -16,5 +16,6 @@
 		bind:value
 		{placeholder}
 		class="font-normal block rounded w-full p-3 bg-grayer text-black outline-none border-black border"
+		on:focus|preventDefault={e => e.currentTarget.select()}
 	/>
 </label>
