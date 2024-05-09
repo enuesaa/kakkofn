@@ -23,8 +23,9 @@ jobs:
 
       - run: pnpm install
       - run: pnpm build
+      - working-directory: dist
+        run: zip -r ../dist.zip *
 
-      - run: echo "TAG_NAME=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
-      - uses: softprops/action-gh-release@v1
+      - uses: softprops/action-gh-release@v2
         with:
-          prerelease: true
+          files: dist.zip
