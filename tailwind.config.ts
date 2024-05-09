@@ -1,8 +1,11 @@
-/** @type {import('tailwindcss').Config} */
+import { type Config } from 'tailwindcss'
+
 export default {
-  content: ['./src/**/*.{html,js,svelte,ts}'],
+  content: [
+    'src/**/*.svelte',
+    'src/app.html',
+  ],
   theme: {
-    extend: {},
     colors: {
       white: '#fafafa',
       black: '#1a1a1a',
@@ -14,5 +17,4 @@ export default {
     }
   },
   darkMode: 'class',
-  plugins: []
-}
+} satisfies Config
