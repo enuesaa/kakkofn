@@ -7,13 +7,13 @@
 
 	const {
 		elements: { trigger, content, arrow },
-		states: { open }
+		states: { open },
 	} = createTooltip({
 		positioning: {
-			placement: 'top'
+			placement: 'top',
 		},
 		openDelay: 0,
-		closeOnPointerDown: false
+		closeOnPointerDown: false,
 	})
 
 	async function copy() {
