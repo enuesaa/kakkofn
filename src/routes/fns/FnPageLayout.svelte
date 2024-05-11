@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { ArrowRightIcon } from 'svelte-feather-icons'
-	import FnPageTitle from '$lib/components/FnPageTitle.svelte'
+	import FnPageTitle from './FnPageTitle.svelte'
 
 	export let title: string
 	export let useArrowRightIcon: boolean = false

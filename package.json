@@ -4,9 +4,8 @@
 	"type": "module",
 	"version": "0.0.4",
 	"scripts": {
-		"dev": "vite dev --port 3000",
+		"dev": "rm -rf .svelte-kit && svelte-kit sync && vite dev --port 3000",
 		"build": "vite build",
-		"sync": "svelte-kit sync",
 		"format": "prettier --write ."
 	},
 	"devDependencies": {

@@ -6,11 +6,6 @@
 
 # nodejs
 node_modules
-logs
-*.log
-npm-debug.log*
-pnpm-debug.log*
-*.tsbuildinfo
 
 # app
 dist
