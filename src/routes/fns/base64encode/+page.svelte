@@ -1,6 +1,6 @@
 <script lang="ts">
 	import CopyButton from '$lib/components/CopyButton.svelte'
-	import FnPageLayout from '$lib/components/FnPageLayout.svelte'
+	import FnPageLayout from '../FnPageLayout.svelte'
 	import FnTextarea from '$lib/components/FnTextarea.svelte'
 	import { Buffer } from 'buffer'
 

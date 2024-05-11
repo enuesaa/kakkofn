@@ -1,5 +1,5 @@
 <script lang="ts">
-	import FnPageLayout from '$lib/components/FnPageLayout.svelte'
+	import FnPageLayout from '../FnPageLayout.svelte'
 	import FnTextarea from '$lib/components/FnTextarea.svelte'
 
 	let text = ''
