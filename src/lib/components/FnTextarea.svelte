@@ -15,7 +15,7 @@
 	{label}
 	<textarea
 		bind:value
-		class="font-normal w-full rounded px-3 py-2 block h-80 bg-grayer text-black outline-none border-black border"
+		class="font-normal w-full rounded px-3 py-2 block h-96 bg-grayer text-black outline-none border-black border"
 		{placeholder}
 		{readonly}
 		on:focus|preventDefault={(e) => e.currentTarget.select()}
