@@ -10,4 +10,5 @@
 	<FnCard href="/fns/base64decode" title="Base64 Decode" />
 	<FnCard href="/fns/urlencode" title="Url Encode" />
 	<FnCard href="/fns/urldecode" title="Url Decode" />
+	<FnCard href="/fns/colorcode-to-rgb" title="カラーコードからRGBへ" />
 </div>
