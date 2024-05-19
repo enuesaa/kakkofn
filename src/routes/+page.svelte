@@ -2,7 +2,7 @@
 	import FnCard from './FnCard.svelte'
 </script>
 
-<div class="flex my-2 p-2">
+<div class="flex my-2 p-2 flex-wrap">
 	<FnCard href="/fns/jsonformat" title="JSON Format" />
 	<FnCard href="/fns/count" title="文字数カウント" />
 	<FnCard href="/fns/replace" title="文字列置き換え" />
@@ -11,4 +11,5 @@
 	<FnCard href="/fns/urlencode" title="Url Encode" />
 	<FnCard href="/fns/urldecode" title="Url Decode" />
 	<FnCard href="/fns/colorcode-to-rgb" title="カラーコードからRGBへ" />
+	<FnCard href="/fns/rgb-to-colorcode" title="RGBからカラーコードへ" />
 </div>

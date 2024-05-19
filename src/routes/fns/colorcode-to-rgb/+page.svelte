@@ -7,16 +7,16 @@
 	let rgb: string = ''
 	$: {
 		if (colorcode.length === 6) {
-			const red = parseInt(colorcode.slice(0,2), 16)
-			const green = parseInt(colorcode.slice(2,4), 16)
-			const blue = parseInt(colorcode.slice(4,6), 16)
+			const red = parseInt(colorcode.slice(0, 2), 16)
+			const green = parseInt(colorcode.slice(2, 4), 16)
+			const blue = parseInt(colorcode.slice(4, 6), 16)
 			if (!isNaN(red) && !isNaN(green) && !isNaN(blue)) {
 				rgb = `rgb(${red}, ${green}, ${blue})`
 			}
 		} else if (colorcode.length === 7 && colorcode.at(0) === '#') {
-			const red = parseInt(colorcode.slice(1,3), 16)
-			const green = parseInt(colorcode.slice(3,5), 16)
-			const blue = parseInt(colorcode.slice(5,7), 16)
+			const red = parseInt(colorcode.slice(1, 3), 16)
+			const green = parseInt(colorcode.slice(3, 5), 16)
+			const blue = parseInt(colorcode.slice(5, 7), 16)
 			if (!isNaN(red) && !isNaN(green) && !isNaN(blue)) {
 				rgb = `rgb(${red}, ${green}, ${blue})`
 			}
@@ -28,7 +28,7 @@
 
 <FnPageLayout title="カラーコードからRGBへ">
 	<svelte:fragment slot="left">
-		<FnTextInput bind:value={colorcode} placeholder='ff9933' label='カラーコード' />
+		<FnTextInput bind:value={colorcode} placeholder="#ff9933" label="カラーコード" />
 	</svelte:fragment>
 
 	<svelte:fragment slot="right">
