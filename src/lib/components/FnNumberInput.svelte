@@ -1,19 +1,13 @@
 <script lang="ts">
-	import { createLabel, melt } from '@melt-ui/svelte'
-
 	export let value: string = ''
 	export let min: string = '0'
 	export let max: string = '10000'
 	export let placeholder: string = ''
 	export let readonly: boolean = false
 	export let label: string = 'テキスト'
-
-	const {
-		elements: { root },
-	} = createLabel()
 </script>
 
-<label use:melt={$root} class="mx-auto w-11/12 block font-bold my-1">
+<label class="mx-auto w-11/12 block font-bold my-1">
 	{label}
 	<input
 		type="number"
