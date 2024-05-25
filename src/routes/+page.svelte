@@ -12,4 +12,6 @@
 	<FnCard href="/fns/urldecode" title="Url Decode" />
 	<FnCard href="/fns/colorcode-to-rgb" title="カラーコードからRGBへ" />
 	<FnCard href="/fns/rgb-to-colorcode" title="RGBからカラーコードへ" />
+	<FnCard href="/fns/unicode-escape" title="Unicode エスケープ" />
+	<FnCard href="/fns/unicode-unescape" title="Unicode アンエスケープ" />
 </div>
