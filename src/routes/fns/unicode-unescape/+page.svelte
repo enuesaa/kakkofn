@@ -8,7 +8,9 @@
 	$: {
 		text2 = ''
 		if (text !== '') {
-			const codeunits = text.split('\\u').filter(v => v !== '')
+			const codeunits = text.split('\\u')
+			// empty string or string which does not startswith `\u`
+			codeunits.shift()
 			const charcodes = codeunits.map(v => parseInt(v, 16))
 			text2 = String.fromCharCode(...charcodes)
 		}
