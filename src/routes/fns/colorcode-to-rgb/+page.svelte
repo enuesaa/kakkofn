@@ -28,7 +28,7 @@
 
 <FnPageLayout title="カラーコードからRGBへ">
 	<svelte:fragment slot="left">
-		<FnTextInput bind:value={colorcode} placeholder="#ff9933" label="カラーコード" />
+		<FnTextInput bind:value={colorcode} placeholder="#ff9933" label="カラーコード" maxlength={7} />
 	</svelte:fragment>
 
 	<svelte:fragment slot="right">
