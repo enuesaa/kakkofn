@@ -10,22 +10,18 @@ permissions:
 
 jobs:
   release:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
       - uses: actions/setup-node@v3
         with:
-          node-version: '20'
+          node-version: '22'
       - uses: pnpm/action-setup@v2
         with:
           version: '9'
 
       - run: pnpm install
       - run: pnpm build
-      - working-directory: dist
-        run: zip -r ../dist.zip *
 
       - uses: softprops/action-gh-release@v2
-        with:
-          files: dist.zip
