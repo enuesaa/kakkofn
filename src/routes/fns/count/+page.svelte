@@ -4,7 +4,8 @@
 
 	let text = ''
 	let count: number = 0
-	$: count = text.length
+	// see https://jsprimer.net/basic/string-unicode/
+	$: count = Array.from(text).length
 </script>
 
 <FnPageLayout title="文字数カウント">

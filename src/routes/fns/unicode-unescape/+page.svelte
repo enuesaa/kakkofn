@@ -11,7 +11,7 @@
 			const codeunits = text.split('\\u')
 			// empty string or string which does not startswith `\u`
 			codeunits.shift()
-			const charcodes = codeunits.map(v => parseInt(v, 16))
+			const charcodes = codeunits.map((v) => parseInt(v, 16))
 			text2 = String.fromCharCode(...charcodes)
 		}
 	}

@@ -3,7 +3,7 @@
 
 	import { createTooltip, melt } from '@melt-ui/svelte'
 	import { fade } from 'svelte/transition'
-	import { CopyIcon } from 'svelte-feather-icons'
+	import { CopyIcon, CheckIcon } from 'svelte-feather-icons'
 
 	const {
 		elements: { trigger, content, arrow },
@@ -16,13 +16,21 @@
 		closeOnPointerDown: false,
 	})
 
+	let checked: boolean = false;
+
 	async function copy() {
 		await globalThis.navigator.clipboard.writeText(text)
+		checked = true
+		setTimeout(() => checked = false, 3000)
 	}
 </script>
 
 <button type="button" class="absolute right-9 top-8" use:melt={$trigger} on:click|preventDefault={copy}>
+	{#if checked}
+	<CheckIcon />
+	{:else}
 	<CopyIcon />
+	{/if}
 </button>
 
 {#if $open}
