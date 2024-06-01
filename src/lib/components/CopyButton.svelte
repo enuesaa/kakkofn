@@ -25,7 +25,7 @@
 	}
 </script>
 
-<button type="button" class="absolute right-9 top-8" use:melt={$trigger} on:click|preventDefault={copy}>
+<button type="button" class="absolute right-4 sm:right-8 top-8" use:melt={$trigger} on:click|preventDefault={copy}>
 	{#if checked}
 	<CheckIcon />
 	{:else}

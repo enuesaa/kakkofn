@@ -1,6 +1,6 @@
 <header class="container mx-auto pt-2 pb-4">
 	<a href="/">
-		<h1 class="font-zenkaku text-2xl font-bold">
+		<h1 class="font-zenkaku text-2xl font-bold px-3">
 			<div class="text-sm">テキスト加工ツール</div>
 			kakkofn
 		</h1>
