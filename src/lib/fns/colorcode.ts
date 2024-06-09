@@ -1,3 +1,11 @@
+const hex = (num: number): string => {
+  const ret = num.toString(16)
+  if (ret.length === 1) {
+    return `${ret}${ret}`
+  }
+  return ret
+}
+
 export const rgbToColorcode = (red: string, green: string, blue: string): string => {
   const rednum = Number(red)
   const greennum = Number(green)
@@ -5,7 +13,7 @@ export const rgbToColorcode = (red: string, green: string, blue: string): string
   const isValid = (val: number) => !isNaN(val) && 0 <= val && val <= 255
 
   if (isValid(rednum) && isValid(greennum) && isValid(bluenum)) {
-    return `#${rednum.toString(16)}${greennum.toString(16)}${bluenum.toString(16)}`
+    return `#${hex(rednum)}${hex(greennum)}${hex(bluenum)}`
   }
   return ''
 }
