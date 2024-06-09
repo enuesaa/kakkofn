@@ -1,11 +1,11 @@
 <script lang="ts">
 	import FnPageLayout from '../FnPageLayout.svelte'
 	import FnTextarea from '$lib/components/FnTextarea.svelte'
+	import { countTextLength } from '$lib/fns/count-text-length'
 
 	let text = ''
 	let count: number = 0
-	// see https://jsprimer.net/basic/string-unicode/
-	$: count = Array.from(text).length
+	$: count = countTextLength(text)
 </script>
 
 <FnPageLayout title="文字数カウント">

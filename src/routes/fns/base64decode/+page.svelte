@@ -2,11 +2,11 @@
 	import CopyButton from '$lib/components/CopyButton.svelte'
 	import FnPageLayout from '../FnPageLayout.svelte'
 	import FnTextarea from '$lib/components/FnTextarea.svelte'
-	import { Buffer } from 'buffer'
+	import { decodeBase64 } from '$lib/fns/base64-encoding'
 
 	let text = ''
 	let text2 = ''
-	$: text2 = Buffer.from(text, 'base64').toString()
+	$: text2 = decodeBase64(text)
 </script>
 
 <FnPageLayout title="Base64 Decode">

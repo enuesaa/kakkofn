@@ -3,10 +3,11 @@
 	import FnPageLayout from '../FnPageLayout.svelte'
 	import FnTextarea from '$lib/components/FnTextarea.svelte'
 	import { Buffer } from 'buffer'
+	import { encodeBase64 } from '$lib/fns/base64-encoding'
 
 	let text = ''
 	let text2 = ''
-	$: text2 = Buffer.from(text).toString('base64')
+	$: text2 = encodeBase64(text)
 </script>
 
 <FnPageLayout title="Base64 Encode">
