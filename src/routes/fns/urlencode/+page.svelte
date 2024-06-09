@@ -2,10 +2,11 @@
 	import CopyButton from '$lib/components/CopyButton.svelte'
 	import FnPageLayout from '../FnPageLayout.svelte'
 	import FnTextarea from '$lib/components/FnTextarea.svelte'
+	import { encodeUrl } from '$lib/fns/url-encoding'
 
 	let text = ''
 	let text2 = ''
-	$: text2 = encodeURIComponent(text)
+	$: text2 = encodeUrl(text)
 </script>
 
 <FnPageLayout title="Url Encode">
