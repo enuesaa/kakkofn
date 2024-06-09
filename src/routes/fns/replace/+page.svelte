@@ -3,12 +3,14 @@
 	import FnPageLayout from '../FnPageLayout.svelte'
 	import FnTextInput from '$lib/components/FnTextInput.svelte'
 	import FnTextarea from '$lib/components/FnTextarea.svelte'
+	import { replaceText } from '$lib/fns/replace-text'
+
 	let text = ''
 	let from = ''
 	let to = ''
 	let text2 = ''
 
-	$: text2 = text.replaceAll(from, to)
+	$: text2 = replaceText(text, from, to)
 </script>
 
 <FnPageLayout title="文字列置き換え" useArrowRightIcon>

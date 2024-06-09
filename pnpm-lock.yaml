@@ -46,7 +46,7 @@ importers:
         specifier: ^3.2.4
         version: 3.2.4(prettier@3.3.1)(svelte@5.0.0-next.152)
       svelte:
-        specifier: 5.0.0-next.152
+        specifier: ^5.0.0-next.152
         version: 5.0.0-next.152
       svelte-sitemap:
         specifier: ^2.6.0
