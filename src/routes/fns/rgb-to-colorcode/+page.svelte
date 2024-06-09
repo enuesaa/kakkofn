@@ -3,22 +3,14 @@
 	import FnTextInput from '$lib/components/FnTextInput.svelte'
 	import FnNumberInput from '$lib/components/FnNumberInput.svelte'
 	import CopyButton from '$lib/components/CopyButton.svelte'
+	import { rgbToColorcode } from '$lib/fns/colorcode'
 
 	let colorcode = '#ffffff'
 	let red: string = '255'
 	let green: string = '255'
 	let blue: string = '255'
 
-	$: {
-		const rednum = Number(red)
-		const greennum = Number(green)
-		const bluenum = Number(blue)
-		const isValid = (val: number) => !isNaN(val) && 0 <= val && val <= 255
-
-		if (isValid(rednum) && isValid(greennum) && isValid(bluenum)) {
-			colorcode = `#${rednum.toString(16)}${greennum.toString(16)}${bluenum.toString(16)}`
-		}
-	}
+	$: colorcode = rgbToColorcode(red, green, blue)
 </script>
 
 <FnPageLayout title="RGBからカラーコードへ">
