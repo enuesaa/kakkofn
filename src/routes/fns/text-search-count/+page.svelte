@@ -8,7 +8,7 @@
 	let count: number = 0
 	$: {
 		if (searchText === '') {
-			count = 0;
+			count = 0
 		} else {
 			count = text.split(searchText).length - 1
 		}

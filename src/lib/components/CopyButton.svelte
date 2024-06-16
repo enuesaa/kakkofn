@@ -16,20 +16,20 @@
 		closeOnPointerDown: false,
 	})
 
-	let checked: boolean = false;
+	let checked: boolean = false
 
 	async function copy() {
 		await globalThis.navigator.clipboard.writeText(text)
 		checked = true
-		setTimeout(() => checked = false, 3000)
+		setTimeout(() => (checked = false), 3000)
 	}
 </script>
 
 <button type="button" class="absolute right-4 sm:right-8 top-8" use:melt={$trigger} on:click|preventDefault={copy}>
 	{#if checked}
-	<CheckIcon />
+		<CheckIcon />
 	{:else}
-	<CopyIcon />
+		<CopyIcon />
 	{/if}
 </button>
 
