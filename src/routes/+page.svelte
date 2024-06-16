@@ -14,4 +14,5 @@
 	<FnCard href="/fns/rgb-to-colorcode" title="RGBからカラーコードへ" />
 	<FnCard href="/fns/unicode-escape" title="Unicode エスケープ" />
 	<FnCard href="/fns/unicode-unescape" title="Unicode アンエスケープ" />
+	<FnCard href="/fns/text-search-count" title="文字列の登場回数" />
 </div>
