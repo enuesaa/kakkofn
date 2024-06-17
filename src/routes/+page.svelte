@@ -15,5 +15,5 @@
 	<FnCard href="/fns/unicode-escape" title="Unicode エスケープ" />
 	<FnCard href="/fns/unicode-unescape" title="Unicode アンエスケープ" />
 	<FnCard href="/fns/text-search-count" title="文字列の登場回数" />
-	<FnCard href="/fns/remove-returnline" title="改行削除" />
+	<FnCard href="/fns/remove-linebreak" title="改行削除" />
 </div>
