@@ -4,10 +4,9 @@
 	import FnTextInput from '$lib/components/FnTextInput.svelte'
 	import { searchTextCount } from '$lib/fns/search-text-count'
 
-	let text = ''
-	let searchText = ''
-	let count: number = 0
-	$: count = searchTextCount(text, searchText)
+	let text = $state('')
+	let searchText = $state('')
+	let count = $derived(searchTextCount(text, searchText))
 </script>
 
 <FnPageLayout title="文字列の登場回数">
