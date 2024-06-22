@@ -18,7 +18,7 @@
 		<FnTextInput bind:value={rgb} placeholder="rgb(255, 153, 51)" readonly label="RGB" />
 		<CopyButton text={rgb} />
 
-		<div style:background={rgb} />
+		<div style:background={rgb}></div>
 	</svelte:fragment>
 </FnPageLayout>
 

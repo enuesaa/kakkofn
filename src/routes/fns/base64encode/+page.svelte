@@ -2,12 +2,10 @@
 	import CopyButton from '$lib/components/CopyButton.svelte'
 	import FnPageLayout from '../FnPageLayout.svelte'
 	import FnTextarea from '$lib/components/FnTextarea.svelte'
-	import { Buffer } from 'buffer'
 	import { encodeBase64 } from '$lib/fns/base64-encoding'
 
-	let text = ''
-	let text2 = ''
-	$: text2 = encodeBase64(text)
+	let text = $state('')
+	let text2 = $derived(encodeBase64(text))
 </script>
 
 <FnPageLayout title="Base64 Encode">
@@ -16,7 +14,7 @@
 	</svelte:fragment>
 
 	<svelte:fragment slot="right">
-		<FnTextarea bind:value={text2} placeholder="44GC44GC44GC" readonly label="出力" />
+		<FnTextarea value={text2} placeholder="44GC44GC44GC" readonly label="出力" />
 		<CopyButton text={text2} />
 	</svelte:fragment>
 </FnPageLayout>

@@ -4,9 +4,8 @@
 	import FnTextarea from '$lib/components/FnTextarea.svelte'
 	import { decodeBase64 } from '$lib/fns/base64-encoding'
 
-	let text = ''
-	let text2 = ''
-	$: text2 = decodeBase64(text)
+	let text = $state('')
+	let text2 = $derived(decodeBase64(text))
 </script>
 
 <FnPageLayout title="Base64 Decode">
@@ -15,7 +14,7 @@
 	</svelte:fragment>
 
 	<svelte:fragment slot="right">
-		<FnTextarea bind:value={text2} placeholder="あああ" readonly label="出力" />
+		<FnTextarea value={text2} placeholder="あああ" readonly label="出力" />
 		<CopyButton text={text2} />
 	</svelte:fragment>
 </FnPageLayout>

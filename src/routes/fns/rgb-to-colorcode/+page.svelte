@@ -24,7 +24,7 @@
 		<FnTextInput bind:value={colorcode} placeholder="#ffffff" readonly label="カラーコード" />
 		<CopyButton text={colorcode} />
 
-		<div style:background={colorcode} />
+		<div style:background={colorcode}></div>
 	</svelte:fragment>
 </FnPageLayout>
 
