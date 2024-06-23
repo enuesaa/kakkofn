@@ -3,7 +3,7 @@
 	"private": true,
 	"type": "module",
 	"license": "MIT",
-	"version": "0.0.7",
+	"version": "0.0.8",
 	"scripts": {
 		"dev": "rm -rf .svelte-kit && svelte-kit sync && vite dev --port 3000",
 		"build": "vite build",
