@@ -13,5 +13,5 @@
 		{placeholder}
 		{readonly}
 		on:focus|preventDefault={(e) => e.currentTarget.select()}
-	/>
+	></textarea>
 </label>

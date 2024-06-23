@@ -4,9 +4,8 @@
 	import FnTextarea from '$lib/components/FnTextarea.svelte'
 	import { escapeUnicode } from '$lib/fns/unicode-escaping'
 
-	let text = ''
-	let text2 = ''
-	$: text2 = escapeUnicode(text)
+	let text = $state('')
+	let text2 = $derived(escapeUnicode(text))
 </script>
 
 <FnPageLayout title="文字列をUnicode エスケープシーケンスへ">
@@ -15,7 +14,7 @@
 	</svelte:fragment>
 
 	<svelte:fragment slot="right">
-		<FnTextarea bind:value={text2} placeholder="\u3042\u3042\u3042" readonly label="出力" />
+		<FnTextarea value={text2} placeholder="\u3042\u3042\u3042" readonly label="出力" />
 		<CopyButton text={text2} />
 	</svelte:fragment>
 </FnPageLayout>

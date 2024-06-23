@@ -35,7 +35,7 @@
 
 {#if $open}
 	<div use:melt={$content} transition:fade={{ duration: 100 }} class="z-10 bg-grayer shadow-xl">
-		<div use:melt={$arrow} />
+		<div use:melt={$arrow}></div>
 		<p class="px-4 py-1">Copy</p>
 	</div>
 {/if}
