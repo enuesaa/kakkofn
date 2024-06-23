@@ -2,14 +2,10 @@
 	import CopyButton from '$lib/components/CopyButton.svelte'
 	import FnPageLayout from '../FnPageLayout.svelte'
 	import FnTextarea from '$lib/components/FnTextarea.svelte'
-	let text = ''
-	let text2 = ''
+	import { jsonFormat } from '$lib/fns/json-format'
 
-	$: {
-		try {
-			text2 = JSON.stringify(JSON.parse(text), null, '  ')
-		} catch (e) {}
-	}
+	let text = $state('')
+	let text2 = $derived(jsonFormat(text))
 </script>
 
 <FnPageLayout title="JSON Format" useArrowRightIcon>
@@ -18,7 +14,7 @@
 	</svelte:fragment>
 
 	<svelte:fragment slot="right">
-		<FnTextarea bind:value={text2} placeholder={'{\n  "a": "b"\n}'} readonly label="出力" />
+		<FnTextarea value={text2} placeholder={'{\n  "a": "b"\n}'} readonly label="出力" />
 		<CopyButton text={text2} />
 	</svelte:fragment>
 </FnPageLayout>
