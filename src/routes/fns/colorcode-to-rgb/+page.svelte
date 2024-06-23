@@ -4,9 +4,8 @@
 	import CopyButton from '$lib/components/CopyButton.svelte'
 	import { colorcodeToRgb } from '$lib/fns/colorcode'
 
-	let colorcode = ''
-	let rgb: string = ''
-	$: rgb = colorcodeToRgb(colorcode)
+	let colorcode = $state('')
+	let rgb = $derived(colorcodeToRgb(colorcode))
 </script>
 
 <FnPageLayout title="カラーコードからRGBへ">
@@ -15,7 +14,7 @@
 	</svelte:fragment>
 
 	<svelte:fragment slot="right">
-		<FnTextInput bind:value={rgb} placeholder="rgb(255, 153, 51)" readonly label="RGB" />
+		<FnTextInput value={rgb} placeholder="rgb(255, 153, 51)" readonly label="RGB" />
 		<CopyButton text={rgb} />
 
 		<div style:background={rgb}></div>

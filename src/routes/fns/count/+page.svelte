@@ -3,9 +3,8 @@
 	import FnTextarea from '$lib/components/FnTextarea.svelte'
 	import { countTextLength } from '$lib/fns/count-text-length'
 
-	let text = ''
-	let count: number = 0
-	$: count = countTextLength(text)
+	let text = $state('')
+	let count = $derived(countTextLength(text))
 </script>
 
 <FnPageLayout title="文字数カウント">
