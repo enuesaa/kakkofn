@@ -10,3 +10,5 @@ node_modules
 # app
 dist
 .svelte-kit
+
+coverage
