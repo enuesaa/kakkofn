@@ -22,3 +22,38 @@ jobs:
       - uses: davelosert/vitest-coverage-report-action@v2
         with:
           file-coverage-mode: all
+
+  e2e:
+    needs: test
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '22'
+      - uses: pnpm/action-setup@v2
+        with:
+          version: '9'
+
+      - uses: actions/cache@v4
+        with:
+          key: e2e-${{ hashFiles('pnpm-lock.yaml') }}
+          path: |
+            node_modules
+            /home/runner/.cache/ms-playwright
+
+      - run: pnpm install
+      - run: pnpm pw:init
+
+      # always mark success because this test aims to extract visual diffs.
+      - run: pnpm pw:test || true
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: report
+          path: e2e/pw-report
+          retention-days: 1
+      - uses: daun/playwright-report-summary@v3
+        with:
+          report-file: e2e/pw-results/results.json
+          job-summary: true
