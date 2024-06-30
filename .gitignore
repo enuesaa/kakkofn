@@ -16,3 +16,4 @@ coverage
 # e2e
 test-results
 __screenshots__
+playwright-report
