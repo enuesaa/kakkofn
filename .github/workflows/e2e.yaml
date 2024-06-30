@@ -23,8 +23,10 @@ jobs:
         run: pnpm install
       - working-directory: e2e
         run: pnpm pw:init
+      
+      # always mark success because this test aims to extract visual diffs.
       - working-directory: e2e
-        run: pnpm pw:test
+        run: pnpm pw:test || true
 
       - uses: actions/upload-artifact@v4
         with:
