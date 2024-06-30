@@ -4,11 +4,11 @@ export default defineConfig({
   use: {
     browserName: 'firefox',
   },
-  outputDir: 'playwright-results',
+  outputDir: 'pw-results',
   reporter: [
-    ['html', { open: 'never', outputFolder: 'playwright-report' }],
+    ['html', { open: 'never', outputFolder: 'pw-report' }],
   ],
-  snapshotPathTemplate: '{testDir}/playwright-screenshots/{arg}{ext}',
+  snapshotPathTemplate: '{testDir}/pw-screenshots/{arg}{ext}',
   webServer: {
     command: 'cd ../ && pnpm run dev',
     url: 'http://localhost:3000',

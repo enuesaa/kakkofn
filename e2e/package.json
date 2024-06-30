@@ -2,9 +2,8 @@
   "name": "@enuesaa/kakkofn-e2e",
   "private": true,
   "scripts": {
-    "pw:install": "playwright install firefox",
-    "pw:test": "playwright test",
-    "pw:report": "playwright show-report"
+    "pw:init": "playwright install firefox",
+    "pw:test": "playwright test"
   },
   "dependencies": {
     "@playwright/test": "^1.45.0"
