@@ -14,6 +14,6 @@ dist
 coverage
 
 # e2e
-test-results
-__screenshots__
-playwright-report
+e2e/playwright-screenshots
+e2e/playwright-results
+e2e/playwright-report
