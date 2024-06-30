@@ -15,4 +15,4 @@ coverage
 
 # e2e
 test-results
-*.spec.ts-snapshots
+__screenshots__
