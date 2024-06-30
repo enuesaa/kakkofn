@@ -12,3 +12,6 @@ dist
 .svelte-kit
 
 coverage
+
+# e2e
+test-results
