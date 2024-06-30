@@ -12,6 +12,7 @@ export default defineConfig({
 	},
 	test: {
 		include: ['src/**/*.test.ts'],
+		exclude: ['e2e'],
 		coverage: {
 			enabled: true,
 			reporter: ['json-summary', 'json'],

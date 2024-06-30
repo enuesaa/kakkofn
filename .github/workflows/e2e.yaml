@@ -19,21 +19,16 @@ jobs:
 
       - uses: actions/cache@v4
         with:
-          key: ${{ hashFiles('e2e/pnpm-lock.json') }}
+          key: ${{ hashFiles('e2e/pnpm-lock.yaml') }}
           path: |
             e2e/node_modules
             /home/runner/.cache/ms-playwright
 
       - run: pnpm install
+      - run: pnpm pw:init
 
-      - working-directory: e2e
-        run: pnpm install
-      - working-directory: e2e
-        run: pnpm pw:init
-      
       # always mark success because this test aims to extract visual diffs.
-      - working-directory: e2e
-        run: pnpm pw:test || true
+      - run: pnpm pw:test || true
 
       - uses: actions/upload-artifact@v4
         with:
