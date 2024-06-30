@@ -1,5 +1,5 @@
 export const realBaseUrl = 'https://kakkofn.dev'
-export const localBaseUrl = 'https://example.com'
+export const localBaseUrl = 'http://localhost:3000'
 
 type Page = {
   name: string

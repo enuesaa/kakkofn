@@ -16,7 +16,14 @@ jobs:
       - uses: pnpm/action-setup@v2
         with:
           version: '9'
-      
+
+      - uses: actions/cache@v3
+        with:
+          path: |
+            e2e/node_modules
+            /home/runner/.cache/ms-playwright
+          key: ${{ hashFiles('e2e/package-lock.json') }}
+
       - run: pnpm install
 
       - working-directory: e2e
@@ -33,3 +40,8 @@ jobs:
           name: report
           path: e2e/pw-report
           retention-days: 1
+
+      - uses: daun/playwright-report-summary@v3
+        with:
+          report-file: e2e/pw-results/results.json
+          job-summary: true
