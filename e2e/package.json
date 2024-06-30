@@ -2,7 +2,7 @@
   "name": "@enuesaa/kakkofn-e2e",
   "private": true,
   "scripts": {
-    "pw:init": "playwright install",
+    "pw:install": "playwright install",
     "pw:test": "playwright test"
   },
   "dependencies": {
