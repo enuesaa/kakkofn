@@ -1,6 +1,5 @@
 # kakkofn
-
-My personal toolbox to speed up develpoment.
+My personal toolbox to speed up development.
 
 ## Stack
 
