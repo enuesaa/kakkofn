@@ -20,19 +20,19 @@
 		"@sveltejs/adapter-static": "^3.0.2",
 		"@sveltejs/kit": "^2.5.18",
 		"@sveltejs/vite-plugin-svelte": "4.0.0-next.3",
-		"@types/node": "^20.14.9",
-		"@vitest/coverage-v8": "^1.6.0",
+		"@types/node": "^20.14.10",
+		"@vitest/coverage-v8": "^2.0.1",
 		"autoprefixer": "^10.4.19",
 		"postcss": "^8.4.39",
 		"prettier": "^3.3.2",
 		"prettier-plugin-svelte": "^3.2.5",
-		"svelte": "5.0.0-next.173",
+		"svelte": "5.0.0-next.180",
 		"svelte-sitemap": "^2.6.0",
 		"tailwindcss": "^3.4.4",
 		"tsx": "^4.16.2",
 		"typescript": "^5.5.3",
 		"vite": "^5.3.3",
-		"vitest": "^1.6.0"
+		"vitest": "^2.0.1"
 	},
 	"dependencies": {
 		"buffer": "^6.0.3",
