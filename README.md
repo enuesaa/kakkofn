@@ -17,15 +17,16 @@ pnpm dev
 ```
 
 ### Visual Regression Testing
-`pnpm pw:test` captures screenshots of `kakkofn.dev` and `localhost:3000`.
-Then playwright compares them.
-
 ```bash
-# install headless browsers
+# Install headless browsers
 pnpm pw:init
-# run Visual Regression Testing
+
+# Run Visual Regression Testing
+# 1. Playwright captures screenshots of `kakkofn.dev` and `localhost:3000`.
+# 2. Playwright compares them.
 pnpm pw:test
-# open test report
+
+# Open test report
 pnpm exec playwright show-report e2e/pw-report
 ```
 
