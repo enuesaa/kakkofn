@@ -1,13 +1,13 @@
 import { test, expect } from 'vitest'
 import { rgbToColorcode, colorcodeToRgb } from './colorcode'
 
-test('rgbToColorcode() convert rgb to colorcode', () => {
+test('normal test case of rgbToColorcode()', () => {
 	expect(rgbToColorcode('255', '255', '255')).toBe('#ffffff')
 	expect(rgbToColorcode('0', '0', '0')).toBe('#000000')
 	expect(rgbToColorcode('255', '153', '51')).toBe('#ff9933')
 })
 
-test('colorcodeToRgb() convert colorcode to rgb', () => {
+test('normal test case of colorcodeToRgb()', () => {
 	expect(colorcodeToRgb('#ffffff')).toBe('rgb(255, 255, 255)')
 	expect(colorcodeToRgb('ffffff')).toBe('rgb(255, 255, 255)')
 	expect(colorcodeToRgb('#000000')).toBe('rgb(0, 0, 0)')
