@@ -16,4 +16,5 @@
 	<FnCard href="/fns/unicode-unescape" title="Unicode アンエスケープ" />
 	<FnCard href="/fns/colorcode-to-rgb" title="カラーコードからRGBへ" />
 	<FnCard href="/fns/rgb-to-colorcode" title="RGBからカラーコードへ" />
+	<FnCard href="/fns/filter-lines" title="特定文字列を含む行を抽出" />
 </div>
