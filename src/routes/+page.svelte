@@ -2,6 +2,10 @@
 	import FnCard from './FnCard.svelte'
 </script>
 
+<svelte:head>
+	<title>kakkofn | テキスト加工ツール</title>
+</svelte:head>
+
 <div class="flex my-2 p-2 flex-wrap">
 	<FnCard href="/fns/jsonformat" title="JSON Format" />
 	<FnCard href="/fns/count" title="文字数カウント" />

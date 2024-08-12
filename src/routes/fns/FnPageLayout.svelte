@@ -6,6 +6,10 @@
 	export let useArrowRightIcon: boolean = false
 </script>
 
+<svelte:head>
+	<title>{title} | kakkofn | テキスト加工ツール</title>
+</svelte:head>
+
 <section>
 	<FnPageTitle {title} />
 
