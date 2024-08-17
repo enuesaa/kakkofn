@@ -21,4 +21,5 @@
 	<FnCard href="/fns/colorcode-to-rgb" title="カラーコードからRGBへ" />
 	<FnCard href="/fns/rgb-to-colorcode" title="RGBからカラーコードへ" />
 	<FnCard href="/fns/filter-lines" title="特定文字列を含む行を抽出" />
+	<FnCard href="/fns/repeat-text" title="文字列繰り返し" />
 </div>
