@@ -8,7 +8,7 @@
 		"dev": "rm -rf .svelte-kit && svelte-kit sync && vite dev --port 3000",
 		"build": "vite build",
 		"postbuild": "svelte-sitemap --domain https://kakkofn.dev --out-dir dist",
-		"format": "prettier --write .",
+		"format": "prettier --write src",
 		"test": "vitest run",
 		"pw:init": "playwright install firefox",
 		"pw:test": "playwright test ./e2e"
