@@ -1,9 +1,11 @@
 # kakkofn
 My personal toolbox to speed up development.
 
+[![ci](https://github.com/enuesaa/kakkofn/actions/workflows/ci.yaml/badge.svg)](https://github.com/enuesaa/kakkofn/actions/workflows/ci.yaml)
+
 ## Stack
-- sveltekit
-- vite
+- SvelteKit
+- Vite
 
 ## Commands
 ### Install deps
