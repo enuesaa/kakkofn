@@ -7,7 +7,7 @@
 	let count = $derived(countTextLength(text))
 </script>
 
-<FnPageLayout title="文字数カウント">
+<FnPageLayout title="文字数カウント" hideArrowRightIcon>
 	<svelte:fragment slot="left">
 		<FnTextarea bind:value={text} placeholder="aaa" label="入力" />
 	</svelte:fragment>
