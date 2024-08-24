@@ -13,7 +13,7 @@
 	$: text2 = replaceText(text, from, to)
 </script>
 
-<FnPageLayout title="文字列置き換え" useArrowRightIcon>
+<FnPageLayout title="文字列置き換え">
 	<svelte:fragment slot="left">
 		<FnTextarea bind:value={text} placeholder="aaa" label="入力" />
 		<FnTextInput bind:value={from} placeholder="a" label="from" />

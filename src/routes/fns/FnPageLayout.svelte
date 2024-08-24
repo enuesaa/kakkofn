@@ -3,7 +3,7 @@
 	import FnPageTitle from './FnPageTitle.svelte'
 
 	export let title: string
-	export let useArrowRightIcon: boolean = false
+	export let hideArrowRightIcon: boolean = false
 </script>
 
 <svelte:head>
@@ -18,7 +18,7 @@
 			<slot name="left" />
 		</div>
 
-		{#if useArrowRightIcon}
+		{#if !hideArrowRightIcon}
 			<div class="flex-none pt-10">
 				<ArrowRightIcon />
 			</div>

@@ -6,7 +6,7 @@
 	let text = $state(crypto.randomUUID())
 </script>
 
-<FnPageLayout title="UUIDを生成">
+<FnPageLayout title="UUIDを生成" hideArrowRightIcon>
 	<svelte:fragment slot="left">
 		<FnTextInput value={text} placeholder={`a\naa`} readonly label="UUID" />
 		<CopyButton text={text} />

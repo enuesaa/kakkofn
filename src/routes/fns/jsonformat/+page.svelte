@@ -8,7 +8,7 @@
 	let text2 = $derived(jsonFormat(text))
 </script>
 
-<FnPageLayout title="JSON Format" useArrowRightIcon>
+<FnPageLayout title="JSON Format">
 	<svelte:fragment slot="left">
 		<FnTextarea bind:value={text} placeholder={'{"a":"b"}'} label="入力" />
 	</svelte:fragment>
