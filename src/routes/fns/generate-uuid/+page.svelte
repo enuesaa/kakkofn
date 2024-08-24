@@ -7,8 +7,8 @@
 </script>
 
 <FnPageLayout title="UUIDを生成">
-	<svelte:fragment slot="right">
-		<FnTextInput value={text} placeholder={`a\naa`} readonly label="出力" />
+	<svelte:fragment slot="left">
+		<FnTextInput value={text} placeholder={`a\naa`} readonly label="UUID" />
 		<CopyButton text={text} />
 	</svelte:fragment>
 </FnPageLayout>

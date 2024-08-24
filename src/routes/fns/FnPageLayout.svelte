@@ -14,7 +14,7 @@
 	<FnPageTitle {title} />
 
 	<div class="flex mt-7">
-		<div class="flex-1">
+		<div class="flex-1 relative">
 			<slot name="left" />
 		</div>
 
