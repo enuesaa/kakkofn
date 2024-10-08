@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { ArrowRightIcon } from 'svelte-feather-icons'
+	import { ArrowRightIcon } from 'lucide-svelte'
 	import FnPageTitle from './FnPageTitle.svelte'
 
 	export let title: string

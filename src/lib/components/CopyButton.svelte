@@ -3,7 +3,7 @@
 
 	import { createTooltip, melt } from '@melt-ui/svelte'
 	import { fade } from 'svelte/transition'
-	import { CopyIcon, CheckIcon } from 'svelte-feather-icons'
+	import { CopyIcon, CheckIcon } from 'lucide-svelte'
 
 	const {
 		elements: { trigger, content, arrow },
