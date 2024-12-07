@@ -13,15 +13,16 @@ jobs:
       actions: write
     steps:
       - id: ci
-        uses: benc-uk/workflow-dispatch@v1
+        uses: the-actions-org/workflow-dispatch@v4
         with:
           workflow: ci.yaml
-      
+          wait-for-completion: true
+
       - run: |
-          echo "${{ steps.ci.outputs.workflowId }}";
           echo "${{ steps.ci.outputs }}";
 
-      - run: echo a
+      - if: ${{ steps.ci.outputs.workflow-conclusion }} == 'success'
+        run: echo a
 
       # - run: |
       #     curl -X PUT \
