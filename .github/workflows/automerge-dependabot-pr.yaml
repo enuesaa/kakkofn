@@ -1,13 +1,12 @@
 name: automerge-dependabot-pr
 
 on:
-  workflow_dispatch:
   pull_request:
     types: [opened, synchronize]
 
 jobs:
   automerge:
-    # if: github.actor == 'dependabot[bot]'
+    if: github.actor == 'dependabot[bot]'
     runs-on: ubuntu-latest
     permissions:
       actions: write
@@ -15,22 +14,26 @@ jobs:
       - id: ci
         uses: the-actions-org/workflow-dispatch@v4
         with:
-          workflow: ci.yaml
           token: ${{ secrets.GITHUB_TOKEN }}
+          workflow: ci.yaml
           wait-for-completion: true
-
-      - run: |
-          echo "${{ steps.ci.outputs }}";
+          wait-for-completion-interval: 30s
 
       - if: ${{ steps.ci.outputs.workflow-conclusion }} == 'success'
-        run: echo a
+        uses: peter-evans/create-or-update-comment@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          issue-number: ${{ github.event.pull_request.number }}
+          body: |
+            As the tests have succeeded, I will merge this PR.
 
-      # - run: |
-      #     curl -X PUT \
-      #       -H "Accept: application/vnd.github.v3+json" \
-      #       -H "Authorization: Bearer $GITHUB_TOKEN" \
-      #       "https://api.github.com/repos/enuesaa/kakkofn/pulls/$PR_NUMBER/merge" \
-      #       -d '{"merge_method":"merge"}'
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      #     PR_NUMBER: ${{ github.event.pull_request.number }}
+      - if: ${{ steps.ci.outputs.workflow-conclusion }} == 'success'
+        run: |
+          curl -X PUT \
+            -H "Authorization: Bearer $GITHUB_TOKEN" \
+            -H "Accept: application/vnd.github.v3+json" \
+            -d '{"merge_method":"merge"}' \
+            "https://api.github.com/repos/enuesaa/kakkofn/pulls/$PR_NUMBER/merge"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
