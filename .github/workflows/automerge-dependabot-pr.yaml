@@ -18,6 +18,7 @@ jobs:
           workflow: ci.yaml
           wait-for-completion: true
           wait-for-completion-interval: 30s
+          ref: ${{ github.event.pull_request.head.ref }}
 
       - if: ${{ steps.ci.outputs.workflow-conclusion }} == 'success'
         uses: peter-evans/create-or-update-comment@v4
