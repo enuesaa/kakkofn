@@ -1,4 +1,4 @@
-name: pr-by-dependabot
+name: automerge-dependabot-pr
 
 on:
   workflow_dispatch:
@@ -6,7 +6,7 @@ on:
     types: [opened, synchronize]
 
 jobs:
-  test:
+  automerge:
     # if: github.actor == 'dependabot[bot]'
     runs-on: ubuntu-latest
     steps:

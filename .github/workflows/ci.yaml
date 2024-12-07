@@ -1,6 +1,8 @@
 name: ci
 
 on:
+  # using this `workflow_dispatch` in automerge-dependabot-pr.yaml
+  workflow_dispatch:
   push:
     branches:
       - '**'
