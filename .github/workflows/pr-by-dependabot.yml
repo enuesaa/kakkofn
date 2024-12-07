@@ -13,8 +13,7 @@ jobs:
       - id: ci
         uses: benc-uk/workflow-dispatch@v1
         with:
-          workflow: ci
-          token: ${{ secrets.GITHUB_TOKEN }}
+          workflow: ci.yaml
       
       - run: |
           echo "${{ steps.ci.outputs.workflowId }}";
