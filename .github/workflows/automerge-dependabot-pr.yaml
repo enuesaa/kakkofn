@@ -16,6 +16,7 @@ jobs:
         uses: the-actions-org/workflow-dispatch@v4
         with:
           workflow: ci.yaml
+          token: ${{ secrets.GITHUB_TOKEN }}
           wait-for-completion: true
 
       - run: |
