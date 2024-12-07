@@ -1,0 +1,33 @@
+name: pr-by-dependabot
+
+on:
+  workflow_dispatch:
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  test:
+    # if: github.actor == 'dependabot[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - id: ci
+        uses: benc-uk/workflow-dispatch@v1
+        with:
+          workflow: ci
+          token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - run: |
+          echo "${{ steps.ci.outputs.workflowId }}";
+          echo "${{ steps.ci.outputs }}";
+
+      - run: echo a
+
+      # - run: |
+      #     curl -X PUT \
+      #       -H "Accept: application/vnd.github.v3+json" \
+      #       -H "Authorization: Bearer $GITHUB_TOKEN" \
+      #       "https://api.github.com/repos/enuesaa/kakkofn/pulls/$PR_NUMBER/merge" \
+      #       -d '{"merge_method":"merge"}'
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #     PR_NUMBER: ${{ github.event.pull_request.number }}
