@@ -5,7 +5,7 @@
 	"license": "MIT",
 	"version": "0.0.9",
 	"scripts": {
-		"dev": "rm -rf .svelte-kit && svelte-kit sync && vite dev --port 3000",
+		"dev": "rm -rf .svelte-kit && NODE_ENV=development svelte-kit sync && vite dev --port 3000",
 		"build": "vite build",
 		"postbuild": "svelte-sitemap --domain https://kakkofn.dev --out-dir dist",
 		"format": "prettier --write src",
