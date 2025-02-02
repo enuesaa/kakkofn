@@ -19,6 +19,8 @@
 </label>
 
 <style lang="postcss">
+	@reference "../../routes/app.css";
+
 	input {
 		@apply font-normal block rounded w-full p-3;
 		@apply bg-grayer text-black outline-hidden border-black border;

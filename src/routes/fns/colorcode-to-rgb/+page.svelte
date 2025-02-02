@@ -22,6 +22,8 @@
 </FnPageLayout>
 
 <style lang="postcss">
+	@reference "tailwindcss/theme";
+
 	div {
 		@apply w-10 h-10 mt-3 mx-10;
 	}
