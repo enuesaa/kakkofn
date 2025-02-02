@@ -5,11 +5,12 @@
 	"license": "MIT",
 	"version": "0.0.9",
 	"scripts": {
-		"dev": "rm -rf .svelte-kit && NODE_ENV=development svelte-kit sync && vite dev --port 3000",
-		"build": "vite build",
+		"sync": "rm -rf .svelte-kit && NODE_ENV=development svelte-kit sync",
+		"dev": "pnpm sync && vite dev --port 3000",
+		"build": "pnpm sync && vite build",
 		"postbuild": "svelte-sitemap --domain https://kakkofn.dev --out-dir dist",
 		"format": "prettier --write src",
-		"test": "vitest run"
+		"test": "pnpm sync && vitest run"
 	},
 	"devDependencies": {
 		"@melt-ui/pp": "^0.3.2",
@@ -17,9 +18,9 @@
 		"@sveltejs/adapter-static": "^3.0.8",
 		"@sveltejs/kit": "^2.16.1",
 		"@sveltejs/vite-plugin-svelte": "5.0.3",
+		"@tailwindcss/postcss": "^4.0.3",
 		"@types/node": "^22.13.0",
 		"@vitest/coverage-v8": "^3.0.4",
-		"autoprefixer": "^10.4.20",
 		"postcss": "^8.5.1",
 		"prettier": "^3.4.2",
 		"prettier-plugin-svelte": "^3.3.3",
