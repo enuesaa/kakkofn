@@ -16,7 +16,7 @@
 		{max}
 		{placeholder}
 		{readonly}
-		class="font-normal block rounded w-full p-3 bg-grayer text-black outline-none border-black border"
+		class="font-normal block rounded-sm w-full p-3 bg-grayer text-black outline-hidden border-black border"
 		on:focus|preventDefault={(e) => e.currentTarget.select()}
 	/>
 </label>
