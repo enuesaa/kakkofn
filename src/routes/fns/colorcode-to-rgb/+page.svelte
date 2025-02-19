@@ -17,14 +17,6 @@
 		<FnTextInput value={rgb} placeholder="rgb(255, 153, 51)" readonly label="RGB" />
 		<CopyButton text={rgb} />
 
-		<div style:background={rgb}></div>
+		<div style:background={rgb} class="w-10 h-10 mt-3 mx-10"></div>
 	</svelte:fragment>
 </FnPageLayout>
-
-<style lang="postcss">
-	@reference "tailwindcss/theme";
-
-	div {
-		@apply w-10 h-10 mt-3 mx-10;
-	}
-</style>

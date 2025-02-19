@@ -10,6 +10,7 @@
 	{label}
 	<input
 		type="text"
+		class="font-normal block rounded w-full p-3 bg-grayer text-black outline-hidden border-black border"
 		bind:value
 		{placeholder}
 		{readonly}
@@ -17,12 +18,3 @@
 		on:focus|preventDefault={(e) => e.currentTarget.select()}
 	/>
 </label>
-
-<style lang="postcss">
-	@reference "../../routes/app.css";
-
-	input {
-		@apply font-normal block rounded w-full p-3;
-		@apply bg-grayer text-black outline-hidden border-black border;
-	}
-</style>

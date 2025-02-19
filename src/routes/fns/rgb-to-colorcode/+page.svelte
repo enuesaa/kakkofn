@@ -24,14 +24,6 @@
 		<FnTextInput bind:value={colorcode} placeholder="#ffffff" readonly label="カラーコード" />
 		<CopyButton text={colorcode} />
 
-		<div style:background={colorcode}></div>
+		<div style:background={colorcode} class="w-10 h-10 mt-3 mx-10"></div>
 	</svelte:fragment>
 </FnPageLayout>
-
-<style lang="postcss">
-	@reference "tailwindcss/theme";
-
-	div {
-		@apply w-10 h-10 mt-3 mx-10;
-	}
-</style>
