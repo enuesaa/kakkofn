@@ -1,5 +1,6 @@
 site "sampleapp" {
-  host = "localhost:3000"
+  host = "localhost"
+  port = 80
   dist = "../dist"
 
   if {
