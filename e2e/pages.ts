@@ -8,7 +8,7 @@ type Page = {
 
 export const pages: Page[] = [
 	{ name: 'top', path: '/' },
-	{ name: 'jsonformat', path: '/fns/jsonformat' },
-	{ name: 'count', path: '/fns/count' },
-	{ name: 'replace', path: '/fns/replace' },
+	{ name: 'jsonformat', path: '/#/fns/jsonformat' },
+	{ name: 'count', path: '/#/fns/count' },
+	{ name: 'replace', path: '/#/fns/replace' },
 ]
