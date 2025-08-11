@@ -1,5 +1,5 @@
 site "sampleapp" {
-  host = "localhost"
+  host = "kakkofn.dev"
   port = 80
   dist = "../dist"
 
