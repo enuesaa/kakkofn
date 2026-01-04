@@ -9,7 +9,5 @@ updates:
       dependencies:
         patterns:
           - '*'
-    reviewers:
-      - enuesaa
     assignees:
       - enuesaa
