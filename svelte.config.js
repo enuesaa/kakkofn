@@ -10,8 +10,5 @@ export default {
 			pages: 'dist',
 			fallback: '404.html',
 		}),
-		router: {
-			type: 'hash',
-		},
 	},
 }
