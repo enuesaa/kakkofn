@@ -36,6 +36,11 @@
 		"buffer": "^6.0.3",
 		"lucide-svelte": "^0.555.0"
 	},
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
+  },
 	"prettier": {
 		"printWidth": 120,
 		"tabWidth": 2,
