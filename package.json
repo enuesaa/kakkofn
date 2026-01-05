@@ -9,6 +9,7 @@
 		"dev": "pnpm sync && vite dev --port 3000",
 		"build": "pnpm sync && vite build",
 		"postbuild": "svelte-sitemap --domain https://kakkofn.dev --out-dir dist",
+		"preview": "vite preview --port 3000",
 		"format": "prettier --write src",
 		"test": "pnpm sync && vitest run"
 	},
