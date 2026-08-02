@@ -3,9 +3,13 @@
 import { defineConfig } from 'vite'
 import { sveltekit } from '@sveltejs/kit/vite'
 import path from 'node:path'
+import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
-	plugins: [sveltekit()],
+	plugins: [
+    tailwindcss(),
+		sveltekit(),
+	],
 	resolve: {
 		alias: {
 			$lib: path.join(__dirname, './src/lib'),
