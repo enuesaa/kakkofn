@@ -21,7 +21,7 @@ export default defineConfig({
 	],
 	resolve: {
 		alias: {
-			$lib: path.join(__dirname, './src/lib'),
+			$lib: path.join(import.meta.dirname, './src/lib'),
 		},
 	},
 	test: {
