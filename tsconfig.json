@@ -15,5 +15,5 @@
 	},
 	"include": ["src/**/*.ts", "src/**/*.js", "src/**/*.svelte", "vite.config.ts"],
 	"exclude": ["node_modules", "dist"],
-	"extends": "./.svelte-kit/tsconfig.json"
+	"extends": "$app/tsconfig"
 }
